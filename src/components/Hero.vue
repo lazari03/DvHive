@@ -12,8 +12,8 @@ import Submission_Form from './Submission_Form.vue'
     </div>
     <div class="flex justify-between m-6 items-center">
       <div class="w-fit mb-36 ml-5">
-        <h1 class="text-white text-6xl my-2">Header</h1>
-        <h2 class="text-white text-3xl">Subheader</h2>
+        <h1 class="text-white text-6xl my-2 drop-shadow-md">Header</h1>
+        <h2 class="text-white text-3xl drop-shadow-md">Subheader</h2>
       </div>
       <Submission_Form :formData="formData" @submit="handleSubmit" />
     </div>

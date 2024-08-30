@@ -41,9 +41,11 @@ function handleSubmit() {
         class="w-full h-28 rounded-md bg-[#D9D9D9] my-4 p-3 focus:border-[#212121] focus:border-solid focus:border-2 focus:outline-none"
         required
       ></textarea>
+      <div class="flex justify-center">
       <button type="submit" class="w-fit p-2 h-10 rounded-md bg-[#212121] text-white">
         Recive free consultation
       </button>
+      </div>
     </form>
   </div>
 </template>
