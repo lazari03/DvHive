@@ -12,7 +12,7 @@ function handleSubmit() {
 </script>
 
 <template>
-  <div class="h-fit bg-[#F0ECE5] w-2/6 rounded-xl shadow-2xl">
+  <div class="h-fit bg-[#F0ECE5] w-2/6 rounded-xl shadow-2xl py-6">
     <form @submit="handleSubmit" class="p-6">
       <input
         v-model="formData.full_name"
@@ -42,9 +42,9 @@ function handleSubmit() {
         required
       ></textarea>
       <div class="flex justify-center">
-      <button type="submit" class="w-fit p-2 h-10 rounded-md bg-[#212121] text-white">
-        Recive free consultation
-      </button>
+        <button type="submit" class="w-fit p-2 h-10 rounded-md bg-[#212121] text-white">
+          Recive free consultation
+        </button>
       </div>
     </form>
   </div>
