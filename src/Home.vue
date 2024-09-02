@@ -3,6 +3,9 @@ import Hero from './components/Hero.vue'
 import license_banner from './components/license_banner.vue'
 import text_middle from './components/text_middle.vue'
 import box_text from './components/box_text.vue'
+import Logo_Large from './components/icons/Logo_Large.vue'
+import image_text_flex from './components/image_text_flex.vue'
+import steps_to_claim from './components/steps_to_claim.vue'
 </script>
 
 <template>
@@ -31,14 +34,14 @@ import box_text from './components/box_text.vue'
         class="m-6"
         text="lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
       />
-      <box_text
-        class="m-6"
-        text="Our team of experts will help you recover the lost value of your vehicle."
-      />
-      <box_text
-        class="m-6"
-        text="Our team of experts will help you recover the lost value of your vehicle."
-      />
     </div>
+    <image_text_flex
+      header="How we help in a diminished value claim"
+      subheader="lorem ipsum dolor sit amet, consectetur adipiscing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      image="src/assets/images/pexels-artyom-kulakov-1190754-2265634.png"
+    />
+    <steps_to_claim 
+    />
   </div>
 </template>

@@ -4,7 +4,10 @@ module.exports = {
   theme: {
     extend: {
       height: {
-        fill: 'fill-available'
+        fill: '-webkit-fill-available'
+      },
+      width: {
+        fill: '-webkit-fill-available'
       },
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif']

@@ -18,4 +18,5 @@ textarea {
 html {
   scroll-behavior: smooth;
   background-color: #212121;
+  max-width: 100vw;
 }

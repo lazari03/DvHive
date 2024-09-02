@@ -3,7 +3,7 @@ defineProps(['text'])
 </script>
 
 <template>
-  <div class="w-fit h-fit p-12 bg-[#F0ECE5] rounded-lg font-normal">
+  <div class="w-fit h-fit p-10 bg-[#D9D9D9] rounded-lg font-normal">
     <span>
       {{ text }}
     </span>

@@ -1,14 +1,9 @@
 <script setup>
-defineProps(
-    [
-        'title',
-        'subtitle',
-    ]
-)
+defineProps(['title', 'subtitle'])
 </script>
 
 <template>
-  <div class="m-6 flex items-center flex-col w-full">
+  <div class="m-6 flex items-center flex-col w-fill">
     <h1 class="my-4 text-5xl text-white">
       {{ title }}
     </h1>
