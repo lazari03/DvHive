@@ -2,8 +2,8 @@
 import Hero from './components/Hero.vue'
 import license_banner from './components/license_banner.vue'
 import text_middle from './components/text_middle.vue'
-import box_text from './components/box_text.vue'
-import Logo_Large from './components/icons/Logo_Large.vue'
+// import box_text from './components/box_text.vue'
+// import Logo_Large from './components/icons/Logo_Large.vue'
 import image_text_flex from './components/image_text_flex.vue'
 import steps_to_claim from './components/steps_to_claim.vue'
 </script>
@@ -25,16 +25,6 @@ import steps_to_claim from './components/steps_to_claim.vue'
       This loss reflects the stigma and perceived risks associated with a previously damaged vehicle, making it crucial
       to understand when filing an insurance claim."
     />
-    <div class="m-6 grid grid-cols-2 justify-center">
-      <box_text
-        class="m-6"
-        text="lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-      />
-      <box_text
-        class="m-6"
-        text="lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-      />
-    </div>
     <image_text_flex
       header="How we help in a diminished value claim"
       subheader="lorem ipsum dolor sit amet, consectetur adipiscing elit,
