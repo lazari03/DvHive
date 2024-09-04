@@ -1,34 +1,28 @@
-<script setup></script>
+<script setup>
+import Steps from './steps.vue';
+</script>
 
 <template>
-  <div class="w-fill flex justify-evenly m-6 my-12">
-    <div class="w-fit">
-      <div
-        class="flex justify-center items-center p-4 border-4 border-[#FDCE83] rounded-full w-32 h-32 text-2xl text-white"
-      >
-        <h1>1</h1>
-      </div>
-    </div>
-    <div class="w-fit">
-      <div
-        class="flex justify-center items-center p-4 border-4 border-[#FDCE83] rounded-full w-32 h-32 text-2xl text-white"
-      >
-        <h1>2</h1>
-      </div>
-    </div>
-    <div class="w-fit">
-      <div
-        class="flex justify-center items-center p-4 border-4 border-[#FDCE83] rounded-full w-32 h-32 text-2xl text-white"
-      >
-        <h1>3</h1>
-      </div>
-    </div>
-    <div class="w-fit">
-      <div
-        class="flex justify-center items-center p-4 border-4 border-[#FDCE83] rounded-full w-32 h-32 text-2xl text-white"
-      >
-        <h1>4</h1>
-      </div>
-    </div>
+  <div class="w-fill flex justify-evenly m-6">
+    <Steps 
+      step_nr="1"
+      step_tittle="Certified Appraisal: "
+      step_text="We provide a detailed, certified diminished value appraisal of your vehicle."
+    />
+    <Steps 
+      step_nr="2"
+      step_tittle="Insurer Submission: "
+      step_text="We draft a strong letter to submit to your insurer, backed by the appraisal."
+    />
+    <Steps 
+      step_nr="3"
+      step_tittle="Negotiation Support: "
+      step_text="We guide and assist you through negotiations to secure fair compensation."
+    />
+    <Steps 
+      step_nr="4"
+      step_tittle="Maximize Your Return: "
+      step_text="Our service ensures you recover more than the cost of the appraisal."
+    />
   </div>
 </template>

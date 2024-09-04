@@ -6,6 +6,7 @@ import text_middle from './components/text_middle.vue'
 // import Logo_Large from './components/icons/Logo_Large.vue'
 import image_text_flex from './components/image_text_flex.vue'
 import steps_to_claim from './components/steps_to_claim.vue'
+import Claim_btn from './components/claim_btn.vue'
 </script>
 
 <template>
@@ -13,8 +14,8 @@ import steps_to_claim from './components/steps_to_claim.vue'
     <Hero
       header="We Help You Restore the Lost Value of Your Vehicle."
       subheader="DVHIVE is a licensed auto appraisal provider operating nationwide,
-    specializing in helping you reclaim your vehicle’s value after an accident.
-    Our diminished value appraisal report will effectively document and support your claim"
+      specializing in helping you reclaim your vehicle’s value after an accident.
+      Our diminished value appraisal report will effectively document and support your claim"
     />
     <license_banner />
     <text_middle
@@ -33,5 +34,6 @@ import steps_to_claim from './components/steps_to_claim.vue'
     />
     <steps_to_claim 
     />
+    <Claim_btn />
   </div>
 </template>
