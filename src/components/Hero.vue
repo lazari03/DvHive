@@ -10,7 +10,7 @@ defineProps(['header', 'subheader'])
 <template>
   <div class="bg-[#212121] h-screen w-full font-montserrat relative pb-5">
     <div
-      class="bg-[url('src/assets/images/automobile-3734397_1920.jpg')] bg-cover opacity-20 w-full h-full absolute z-0"
+      class="bg-[url('src/assets/images/automobile-3734397_1920.jpg')] bg-contain opacity-15 w-full h-full absolute z-0"
     ></div>
     <div class="flex justify-between relative z-10">
       <Logo class="h-20 my-2" />
