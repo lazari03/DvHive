@@ -15,8 +15,10 @@ textarea {
   resize: none;
 }
 
-html {
+html,
+body {
   scroll-behavior: smooth;
   background-color: #212121;
-  max-width: 100vw;
+  max-width: 100vw !important;
+  overflow-x: hidden;
 }
