@@ -1,7 +1,6 @@
-
 <template>
   <svg width="50%" viewBox="0 0 1515 1445" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g style="mix-blend-mode: screen" clip-path="url(#clip0_93_3)">
+    <g clip-path="url(#clip0_93_3)">
       <path
         d="M-107.691 796.618C-107.691 796.618 16.2924 687.681 23.1381 690.808C29.9838 693.935 273.219 987.448 265.359 993.11C257.499 998.772 38.1818 983.814 -107.691 796.618Z"
         fill="#FDCE83"

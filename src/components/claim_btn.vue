@@ -9,6 +9,7 @@ import White_bee from './icons/white_bee.vue'
       <button class="relative z-10 text-[#212121] text-xl font-semibold mx-4">
         Claim Your Free Consultation
       </button>
+      
     </div>
   </div>
 </template>

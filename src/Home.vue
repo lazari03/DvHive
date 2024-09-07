@@ -8,8 +8,8 @@ import image_text_flex from './components/image_text_flex.vue'
 import steps_to_claim from './components/steps_to_claim.vue'
 import Claim_btn from './components/claim_btn.vue'
 import FAQ from './components/FAQ.vue'
-import Reviews from './components/Reviews.vue'
 import Client_reviews from './components/client_reviews.vue'
+import Consultation from './components/Consultation.vue'
 </script>
 
 <template>
@@ -41,8 +41,8 @@ import Client_reviews from './components/client_reviews.vue'
     />
     <steps_to_claim />
     <Claim_btn />
-    <Reviews />
     <!-- <FAQ /> -->
-     <Client_reviews />
+    <Client_reviews />
+    <Consultation />
   </div>
 </template>
