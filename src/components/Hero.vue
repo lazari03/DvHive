@@ -23,6 +23,6 @@ defineProps(['header', 'subheader'])
       </div>
       <Submission_Form class="w-1/3" :formData="formData" @submit="handleSubmit" />
     </div>
-    <hero_bg />
+    <hero_bg class="ml-10"/>
   </div>
 </template>

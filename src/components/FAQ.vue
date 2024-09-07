@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     title: 'What is the cost of a diminished value report, and what does it include?',
-    text: 'Our diminished value reports cost $350 and provide the following:\n\n •	A certified appraisal report that outlines the extent of your diminished value loss.\n •	Detailed instructions on how to file your claim, including a sample demand letter.\n•	Continuous support and assistance via phone and email throughout the claim process.\n\nOur report ensures you have all the tools necessary to file and maximize your diminished value claim. Many clients have found that the compensation they receive greatly exceeds the cost of our reports.',
+    text: 'Our diminished value reports cost $350 and provide the following:\n\n •	A certified appraisal report that outlines the extent of your diminished value loss.\n •	Detailed instructions on how to file your claim, including a sample demand letter.\n •	Continuous support and assistance via phone and email throughout the claim process.\n\nOur report ensures you have all the tools necessary to file and maximize your diminished value claim. Many clients have found that the compensation they receive greatly exceeds the cost of our reports.',
     active: false
   },
   {

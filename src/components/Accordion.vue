@@ -4,9 +4,9 @@ import { ref, onMounted } from 'vue'
 const accordionOpen = ref<boolean>(false)
 
 const props = defineProps<{
-  title: string
-  id: string
-  active?: boolean
+  title: string,
+  id: string,
+  active?: boolean,
 }>()
 
 onMounted(() => {

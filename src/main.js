@@ -7,7 +7,6 @@ import Home from './Home.vue'
 import Alpine from 'alpinejs'
 
 window.Alpine = Alpine
-
 Alpine.start()
 
 library.add(farComment)

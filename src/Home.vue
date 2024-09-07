@@ -9,6 +9,7 @@ import steps_to_claim from './components/steps_to_claim.vue'
 import Claim_btn from './components/claim_btn.vue'
 import FAQ from './components/FAQ.vue'
 import Reviews from './components/Reviews.vue'
+import Client_reviews from './components/client_reviews.vue'
 </script>
 
 <template>
@@ -42,5 +43,6 @@ import Reviews from './components/Reviews.vue'
     <Claim_btn />
     <Reviews />
     <!-- <FAQ /> -->
+     <Client_reviews />
   </div>
 </template>
