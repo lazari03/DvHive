@@ -6,6 +6,9 @@ module.exports = {
       height: {
         fill: '-webkit-fill-available'
       },
+      fill:{
+        'custom-gradient': 'linear-gradient(-140deg, #FDCE83, #FFE6BF)'
+      },
       width: {
         fill: '-webkit-fill-available'
       },

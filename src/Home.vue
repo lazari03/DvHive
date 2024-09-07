@@ -7,9 +7,9 @@ import Logo_Large from './components/icons/Logo_Large.vue'
 import image_text_flex from './components/image_text_flex.vue'
 import steps_to_claim from './components/steps_to_claim.vue'
 import Claim_btn from './components/claim_btn.vue'
-import FAQ from './components/FAQ.vue'
 import Client_reviews from './components/client_reviews.vue'
 import Consultation from './components/Consultation.vue'
+import Footer from './components/Footer.vue'
 </script>
 
 <template>
@@ -41,8 +41,8 @@ import Consultation from './components/Consultation.vue'
     />
     <steps_to_claim />
     <Claim_btn />
-    <!-- <FAQ /> -->
     <Client_reviews />
     <Consultation />
+    <Footer />
   </div>
 </template>

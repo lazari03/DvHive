@@ -4,9 +4,9 @@ import White_bee from './icons/white_bee.vue'
 
 <template>
   <div class="flex justify-center w-full my-24">
-    <div class="relative w-2/6 bg-[#FDCE83] rounded-full overflow-hidden flex">
-      <White_bee class="pt-2 fill-white" />
-      <button class="relative z-10 text-[#212121] text-xl font-semibold mx-4">
+    <div class="relative w-4/6 bg-[#212121] rounded-full overflow-hidden flex ">
+      <White_bee class="pt-2  fill-[#FDCE83] -m-1" />
+      <button class="relative z-10 text-[#F0ECE5] text-xl font-semibold mx-4">
         Claim Your Free Consultation
       </button>
     </div>
