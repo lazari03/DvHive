@@ -3,7 +3,7 @@ defineProps(['navItem'])
 </script>
 
 <template>
-  <h1 class="mx-4">
+  <h1>
     <a href="">
       {{ navItem }}
     </a>
