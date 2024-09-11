@@ -1,12 +1,11 @@
 <script setup>
-import Logo from './icons/Logo.vue'
+import Rating from './icons/Rating.vue'
 </script>
 
 <template>
-  <div class=" bg-[#D9D9D9] h-32 w-full flex justify-center items-center">
-    <Logo class="h-20 my-2" />
-    <Logo class="h-20 my-2" />
-    <Logo class="h-20 my-2" />
-    <Logo class="h-20 my-2" />
+  <div class="bg-[#F0ECE5] h-32 w-full flex justify-center items-center">
+    <template v-for="index in 2" :key="index">
+      <Rating class="h-32 m-2 w-fit" />
+    </template>
   </div>
 </template>

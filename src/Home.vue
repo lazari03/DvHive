@@ -1,14 +1,16 @@
 <script setup>
-import Hero from './components/Hero.vue'
-import license_banner from './components/license_banner.vue'
-import text_middle from './components/text_middle.vue'
-import Logo_Large from './components/icons/Logo_Large.vue'
-import image_text_flex from './components/image_text_flex.vue'
-import steps_to_claim from './components/steps_to_claim.vue'
-import Claim_btn from './components/claim_btn.vue'
-import Client_reviews from './components/client_reviews.vue'
-import Consultation from './components/Consultation.vue'
-import FooterComponent from './components/FooterComponent.vue'
+import { defineAsyncComponent } from 'vue'
+
+const Hero = defineAsyncComponent(() => import('./components/Hero.vue'))
+const license_banner = defineAsyncComponent(() => import('./components/license_banner.vue'))
+const text_middle = defineAsyncComponent(() => import('./components/text_middle.vue'))
+const Logo_Large = defineAsyncComponent(() => import('./components/icons/Logo_Large.vue'))
+const image_text_flex = defineAsyncComponent(() => import('./components/image_text_flex.vue'))
+const steps_to_claim = defineAsyncComponent(() => import('./components/steps_to_claim.vue'))
+const Claim_btn = defineAsyncComponent(() => import('./components/claim_btn.vue'))
+const Client_reviews = defineAsyncComponent(() => import('./components/client_reviews.vue'))
+const Consultation = defineAsyncComponent(() => import('./components/Consultation.vue'))
+const FooterComponent = defineAsyncComponent(() => import('./components/FooterComponent.vue'))
 </script>
 
 <template>

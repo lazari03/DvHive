@@ -9,13 +9,16 @@ export default {
     return {
       cards: [
         {
-          description: 'This is the first card'
+          description:
+            'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
         },
         {
-          description: 'This is the second card'
+          description:
+            'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
         },
         {
-          description: 'This is the third card'
+          description:
+            'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
         }
       ]
     }

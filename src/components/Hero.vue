@@ -8,9 +8,9 @@ defineProps(['header', 'subheader'])
 </script>
 
 <template>
-  <div class="bg-[#212121] md:h-screen w-full font-montserrat relative pb-5 z-10">
+  <div class="bg-[#212121] md:h-screen w-full font-montserrat relative pb-5 z-10 h-full">
     <div
-      class="md:bg-[url('src/assets/images/automobile-3734397_1920.jpg')] md:bg-cover lg:bg-contain opacity-15 w-full h-full absolute z-0 bg-no-repeat"
+      class="md:bg-[url('src/assets/images/automobile-3734397_1920.jpg')] md:bg-cover lg:bg-contain opacity-15 w-full h-full absolute z-0"
     ></div>
     <div class="flex justify-between items-center relative z-30">
       <Logo class="h-20 my-2" />

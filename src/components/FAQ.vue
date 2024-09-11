@@ -44,11 +44,13 @@ const faqs = [
 
 <template>
   <div class="flex flex-col justify-center items-center m-6">
-    <div class="text-white capitalize flex justify-center my-12 items-center py-6">
-      <span class="text-5xl">Frequently Asked Questions</span>
+    <div
+      class="text-white capitalize flex lg:flex-row flex-col justify-center my-6 items-center gap-3"
+    >
+      <span class="text-5xl lg:text-left text-center">Frequently Asked Questions</span>
       <font-awesome-icon :icon="['far', 'comment']" class="text-5xl mx-2" />
     </div>
-    <span class="w-2/3 text-white text-md text-center">
+    <span class="lg:w-2/3 text-white text-md text-center">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, voluptatibus iste velit
       aspernatur rem obcaecati mollitia doloribus alias earum illo consequatur necessitatibus culpa
       dicta a quibusdam, molestias recusandae dolorum fugit.

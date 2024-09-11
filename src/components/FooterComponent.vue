@@ -18,15 +18,17 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
         <span class="text-white text-sm lg:text-lg my-2"> Diminished Value </span>
         <span class="text-white text-sm lg:text-lg my-2"> Pricing </span>
         <span class="text-white text-sm lg:text-lg my-2"> FAQ </span>
-        <div class="flex pt-6 mt-12 gap-6 items-center">
+        <div class="flex pt-6 mt-12 gap-6">
           <div class="flex flex-col gap-4 w-fit">
-            <font-awesome-icon icon="phone" class="text-white text-xl lg:text-3xl" />
-            <font-awesome-icon :icon="['far', 'envelope']" class="text-white text-xl lg:text-3xl" />
-            <font-awesome-icon icon="location-dot" class="text-white text-xl lg:text-3xl" />
+            <font-awesome-icon icon="phone" class="text-white text-xl lg:text-2xl" />
+            <font-awesome-icon :icon="['far', 'envelope']" class="text-white text-xl lg:text-2xl" />
+            <font-awesome-icon icon="location-dot" class="text-white text-xl lg:text-2xl" />
           </div>
-          <div class="flex flex-col gap-4 w-fit">
-            <span class="text-white text-sm lg:text-lg no-underline"> +1 (123)-456-7890</span>
-            <span class="text-white text-sm lg:text-lg no-underline"> username@mail.com</span>
+          <div class="flex flex-col gap-4 w-fit justify-center">
+            <a href="tel:" class="text-white text-sm lg:text-lg"> +1 (123)-456-7890</a>
+            <a href="mailto:username@mail.com" class="text-white text-sm lg:text-lg">
+              username@mail.com</a
+            >
             <span class="text-white text-sm lg:text-lg"> 1234 Street Name, City, State, Zip </span>
           </div>
         </div>

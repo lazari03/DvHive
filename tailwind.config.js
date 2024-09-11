@@ -28,6 +28,7 @@ module.exports = {
     }
   },
   plugins: [
+    require('tailwindcss-animated'),
     plugin(function ({ matchUtilities, theme }) {
       matchUtilities(
         {
