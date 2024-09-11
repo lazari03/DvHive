@@ -1,49 +1,44 @@
 <script setup>
-const formData = {
+import axios from 'axios';
+import { ref } from 'vue';
+
+const formData = ref({
   full_name: '',
   email: '',
   phone: '',
   message: ''
-}
+});
 
-function handleSubmit() {
-  console.log(formData)
+async function handleSubmit() {
+  try {
+    const response = await axios.post('http://localhost:3000/send-email', formData.value);
+    console.log('Email sent successfully:', response.data);
+    alert('Email sent successfully!');
+  } catch (error) {
+    console.error('Failed to send email:', error);
+    alert('Failed to send email.');
+  }
 }
 </script>
 
 <template>
   <div class="h-fit bg-[#F0ECE5] w-2/6 rounded-xl shadow-2xl py-6">
-    <form @submit="handleSubmit" class="p-6">
-      <input
-        v-model="formData.full_name"
-        type="text"
-        placeholder="Full Name"
+    <form @submit.prevent="handleSubmit" class="p-6" action="">
+      <input v-model="formData.full_name" type="text" placeholder="Full Name"
         class="w-full h-10 rounded-md bg-[#D9D9D9] my-4 p-3 focus:border-[#212121] focus:border-solid focus:border-2 focus:outline-none"
-        required
-      />
-      <input
-        v-model="formData.email"
-        type="email"
-        placeholder="Email"
+        required />
+      <input v-model="formData.email" type="email" placeholder="Email"
         class="w-full h-10 rounded-md bg-[#D9D9D9] my-4 p-3 focus:border-[#212121] focus:border-solid focus:border-2 focus:outline-none"
-        required
-      />
-      <input
-        v-model="formData.phone"
-        type="tel"
-        placeholder="Phone Number"
+        required />
+      <input v-model="formData.phone" type="tel" placeholder="Phone Number"
         class="w-full h-10 rounded-md bg-[#D9D9D9] my-4 p-3 focus:border-[#212121] focus:border-solid focus:border-2 focus:outline-none"
-        required
-      />
-      <textarea
-        v-model="formData.message"
-        placeholder="Message"
+        required />
+      <textarea v-model="formData.message" placeholder="Message"
         class="w-full h-28 rounded-md bg-[#D9D9D9] my-4 p-3 focus:border-[#212121] focus:border-solid focus:border-2 focus:outline-none"
-        required
-      ></textarea>
+        required></textarea>
       <div class="flex justify-center">
         <button type="submit" class="w-fit p-2 h-10 rounded-md bg-[#212121] text-white">
-          Recive free consultation
+          Receive free consultation
         </button>
       </div>
     </form>
