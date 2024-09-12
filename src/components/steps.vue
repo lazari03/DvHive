@@ -10,14 +10,14 @@ defineProps(['step_nr', 'step_text', 'step_tittle'])
       >
         <h1>{{ step_nr }}</h1>
       </div>
-      <span class="text-white text-lg text-center font-normal m-5">
+      <span class="text-white text-lg text-center font-normal m-5 lg:w-full md:w-[75%]">
         <strong class="text-xl">
           {{ step_tittle }}
         </strong>
         <br />
         {{ step_text }}
       </span>
-      <div class="w-1/6 h-0 border-2 border-[#FDCE83] rounded-xl hidden md:block"></div>
+      <div class="w-1/6 h-0 border-2 border-[#FDCE83] rounded-xl hidden lg:block"></div>
     </div>
   </div>
 </template>

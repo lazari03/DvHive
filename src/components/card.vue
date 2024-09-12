@@ -11,7 +11,7 @@ export default {
 
 <template>
   <div
-    class="md:w-1/4 w-full h-96 bg-[#D9D9D9] rounded-md relative flex items-center justify-center my-12 z-0"
+    class="lg:w-1/4 md:w-3/4 w-full h-96 bg-[#D9D9D9] rounded-md relative flex items-center justify-center my-12 z-0"
     :id="`card-${id}`"
   >
     <p class="z-10 px-3 text-center lg:text-left">{{ cardData.description }}</p>

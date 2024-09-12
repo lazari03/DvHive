@@ -16,12 +16,12 @@ defineProps(['header', 'subheader'])
       <Logo class="h-20 my-2" />
       <NavBar />
     </div>
-    <div class="flex justify-between p-6 items-center h-fit relative z-10 sm:flex-row flex-col">
-      <div class="lg:w-2/4 md:mb-36 mb-11 md:text-left text-center">
-        <h1 class="text-white lg:text-5xl text-3xl font-semibold my-4 text-shadow shadow-[#212121]">
+    <div class="flex justify-between p-6 items-center h-fit relative z-10 lg:flex-row flex-col">
+      <div class="lg:w-2/4 lg:mb-36 mb-11 lg:text-left text-center">
+        <h1 class="text-white md:text-5xl text-3xl font-semibold my-4 text-shadow shadow-[#212121]">
           {{ header }}
         </h1>
-        <h2 class="text-white lg:text-lg text-shadow-sm shadow-black font-normal">
+        <h2 class="text-white md:text-lg text-shadow-sm shadow-black font-normal">
           {{ subheader }}
         </h2>
       </div>

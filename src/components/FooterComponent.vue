@@ -12,12 +12,12 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
     </div>
     <div class="w-3/4 h-fit p-6 py-4 z-10 flex gap-6">
       <div class="flex flex-col w-1/2">
-        <span class="text-white text-xl lg:text-4xl my-4"> Services </span>
-        <span class="text-white text-sm lg:text-lg my-2"> Home </span>
-        <span class="text-white text-sm lg:text-lg my-2"> Intake Form </span>
-        <span class="text-white text-sm lg:text-lg my-2"> Diminished Value </span>
-        <span class="text-white text-sm lg:text-lg my-2"> Pricing </span>
-        <span class="text-white text-sm lg:text-lg my-2"> FAQ </span>
+        <span class="text-white text-xl md:text-4xl my-4"> Services </span>
+        <span class="text-white text-sm md:text-md my-2"> Home </span>
+        <span class="text-white text-sm md:text-md my-2"> Intake Form </span>
+        <span class="text-white text-sm md:text-md my-2"> Diminished Value </span>
+        <span class="text-white text-sm md:text-md my-2"> Pricing </span>
+        <span class="text-white text-sm md:text-md my-2"> FAQ </span>
         <div class="flex pt-6 mt-12 gap-6">
           <div class="flex flex-col gap-4 w-fit">
             <font-awesome-icon icon="phone" class="text-white text-xl lg:text-2xl" />
@@ -29,15 +29,15 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
             <a href="mailto:username@mail.com" class="text-white text-sm lg:text-lg">
               username@mail.com</a
             >
-            <span class="text-white text-sm lg:text-lg"> 1234 Street Name, City, State, Zip </span>
+            <span class="text-white text-sm md:text-lg"> 1234 Street Name, City, State, Zip </span>
           </div>
         </div>
       </div>
       <div class="flex flex-col w-1/2">
-        <span class="text-white text-xl lg:text-4xl my-4"> Legal </span>
-        <span class="text-white text-sm lg:text-lg my-2"> Privacy Policy </span>
-        <span class="text-white text-sm lg:text-lg my-2"> Terms of Use </span>
-        <span class="mt-6 py-6 lg:w-3/4 w-0 text-white hidden lg:block">
+        <span class="text-white text-xl md:text-4xl my-4"> Legal </span>
+        <span class="text-white text-sm md:text-md my-2"> Privacy Policy </span>
+        <span class="text-white text-sm md:text-md my-2"> Terms of Use </span>
+        <span class="mt-6 py-6 md:w-3/4 w-0 text-white hidden md:block">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam omnis, quae, itaque
           dolores quas, eveniet expedita nesciunt eos pariatur quam ullam at exercitationem. Soluta
           id minima accusantium facere repellat harum.
@@ -45,7 +45,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
       </div>
     </div>
     <div class="absolute z-0 bottom-0 right-0 mix-blend-screen">
-      <footer_logo class="h-48 lg:h-full" />
+      <footer_logo class="h-48 md:h-full" />
     </div>
   </div>
 </template>
