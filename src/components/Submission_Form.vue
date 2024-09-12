@@ -11,7 +11,7 @@ onMounted(() => {
   iti.value = intlTelInput(input, {
     utilsScript: '/node_modules/intl-tel-input/build/js/utils.js',
     containerClass: 'w-full',
-    initialCountry: 'us'
+    initialCountry: 'us',
   })
 })
 
