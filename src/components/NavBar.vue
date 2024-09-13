@@ -13,11 +13,11 @@ const navItems = [
 </script>
 <template>
   <div
-    class="bg-[#F0ECE5] w-fit h-11 rounded-full m-6 md:flex justify-center items-center hidden md:gap-2 lg:gap-8 px-8"
+    class="bg-[#F0ECE5] w-fit h-11 rounded-full m-6 lg:flex justify-center items-center hidden lg:gap-8 px-8"
   >
     <template v-for="item in navItems" :key="item">
       <NavItem :navItem="item" />
     </template>
   </div>
-  <Dropdown :items="navItems" class="z-30 relative md:hidden" />
+  <Dropdown :items="navItems" class="z-30 relative lg:hidden" />
 </template>

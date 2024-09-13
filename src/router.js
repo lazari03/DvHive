@@ -5,6 +5,8 @@ import Pricing from './Pricing.vue'
 import FAQ from './FAQ.vue'
 import Contact from './Contact.vue'
 import IntakeForm from './IntakeForm.vue'
+import PrivacyPolicy from './PrivacyPolicy.vue'
+import TermsOfUse from './TermsOfUse.vue'
 
 const routes = [
   { path: '/', component: Home },
@@ -12,7 +14,9 @@ const routes = [
   { path: '/pricing', component: Pricing },
   { path: '/faq', component: FAQ },
   { path: '/contact', component: Contact },
-  { path: '/intake-form', component: IntakeForm }
+  { path: '/intake-form', component: IntakeForm },
+  { path: '/privacy-policy', component: PrivacyPolicy },
+  { path: '/terms-of-use', component: TermsOfUse},
 ]
 
 const router = createRouter({

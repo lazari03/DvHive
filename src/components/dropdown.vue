@@ -56,7 +56,7 @@ onMounted(() => {
             :key="index"
             class="block px-4 py-2 text-sm text-[#212121] hover:bg-[#e3e3e1] cursor-pointer"
           >
-            <router-link :to="item.path">
+            <router-link :to="item.path" class="w-full block">
               {{ item.name }}
             </router-link>
           </li>
