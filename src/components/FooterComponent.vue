@@ -43,12 +43,12 @@ const legal = [
             <font-awesome-icon :icon="['far', 'envelope']" class="text-white text-xl lg:text-2xl" />
             <font-awesome-icon icon="location-dot" class="text-white text-xl lg:text-2xl" />
           </div>
-          <div class="flex flex-col gap-4 w-fit justify-center">
-            <a href="tel:" class="text-white text-sm lg:text-lg"> +1 (123)-456-7890</a>
+          <div class="flex flex-col gap-4 justify-center">
+            <a href="tel:" class="text-white text-sm lg:text-lg w-fit"> +1 (123)-456-7890</a>
             <a href="mailto:username@mail.com" class="text-white text-sm lg:text-lg">
               username@mail.com</a
             >
-            <span class="text-white text-sm md:text-lg"> 1234 Street Name, City, State, Zip </span>
+            <span class="text-white text-sm lg:text-lg"> 1234 Street Name, City, State, Zip </span>
           </div>
         </div>
       </div>
@@ -61,7 +61,7 @@ const legal = [
           @click="router.push(item.route)"
           >{{ item.text }}</span
         >
-        <span class="mt-6 py-6 md:w-3/4 w-0 text-white hidden md:block">
+        <span class="mt-6 py-6 text-white hidden md:block md:w-full">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam omnis, quae, itaque
           dolores quas, eveniet expedita nesciunt eos pariatur quam ullam at exercitationem. Soluta
           id minima accusantium facere repellat harum.

@@ -11,7 +11,7 @@ onMounted(() => {
   iti.value = intlTelInput(input, {
     utilsScript: '/node_modules/intl-tel-input/build/js/utils.js',
     containerClass: 'w-full',
-    initialCountry: 'us',
+    initialCountry: 'us'
   })
 })
 
@@ -58,13 +58,13 @@ async function handleSubmit() {
         class="w-full h-10 rounded-md bg-[#D9D9D9] my-4 p-3 focus:border-[#212121] focus:border-solid focus:border-2 focus:outline-none"
         required
       />
-      <div class="flex flex-row">
+      <div class="flex flex-row my-4">
         <input
           id="phone"
           v-model="formData.phone"
           type="tel"
           placeholder="+1-1234567890"
-          class="w-full h-10 rounded-md bg-[#D9D9D9] my-4 p-3 focus:border-[#212121] focus:border-solid focus:border-2 focus:outline-none"
+          class="w-full h-10 rounded-md bg-[#D9D9D9] p-3 focus:border-[#212121] focus:border-solid focus:border-2 focus:outline-none"
           required
         />
       </div>

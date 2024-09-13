@@ -3,7 +3,7 @@ import White_bee from './icons/white_bee.vue'
 </script>
 
 <template>
-  <div class="flex justify-center items-center md:w-3/4 w-fit m-auto my-24">
+  <div class="flex justify-center items-center md:w-3/4 lg:w-full w-5/6 m-auto my-24">
     <router-link
       to="/intake-form"
       class="relative lg:w-2/6 bg-[#FDCE83] rounded-full overflow-hidden flex w-fit m-6 items-center"
