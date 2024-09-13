@@ -6,12 +6,16 @@ import { faEnvelope as farEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { createApp } from 'vue'
-import Home from './Home.vue'
+import router from './router.js'
 import Alpine from 'alpinejs'
+import App from './App.vue'
 
 window.Alpine = Alpine
 Alpine.start()
 
 library.add(farComment, faPhone, farEnvelope, faLocationDot)
 
-createApp(Home).component('font-awesome-icon', FontAwesomeIcon).mount('#app')
+const app = createApp(App)
+app.component('font-awesome-icon', FontAwesomeIcon)
+app.use(router)
+app.mount('#app')

@@ -3,15 +3,15 @@ defineProps(['step_nr', 'step_text', 'step_tittle'])
 </script>
 
 <template>
-  <div class="w-fit">
+  <div class="w-full">
     <div class="flex flex-col justify-center items-center">
       <div
         class="flex justify-center items-center p-4 border-4 border-[#FDCE83] rounded-full w-32 h-32 text-2xl text-white font-bold"
       >
         <h1>{{ step_nr }}</h1>
       </div>
-      <span class="text-white text-lg text-center font-normal m-5 lg:w-full md:w-[75%]">
-        <strong class="text-xl">
+      <span class="text-white text-lg text-center font-normal m-5 lg:w-[88%] md:w-[75%]">
+        <strong class="text-xl w-full">
           {{ step_tittle }}
         </strong>
         <br />

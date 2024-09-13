@@ -2,12 +2,18 @@
 import NavItem from './NavItem.vue'
 import Dropdown from './dropdown.vue'
 
-const navItems = ['Home', 'Diminished Value', 'Pricing', 'FAQ', 'Contact']
+const navItems = [
+  { name: 'Home', path: '/' },
+  { name: 'Intake Form', path: '/intake-form' },
+  { name: 'Diminished Value', path: '/diminished-value' },
+  { name: 'Pricing', path: '/pricing' },
+  { name: 'FAQ', path: '/faq' },
+  { name: 'Contact', path: '/contact' }
+]
 </script>
-
 <template>
   <div
-    class="bg-[#F0ECE5] w-fit h-11 rounded-full m-6 md:flex justify-center items-center hidden md:gap-2 lg:gap-5 px-8"
+    class="bg-[#F0ECE5] w-fit h-11 rounded-full m-6 md:flex justify-center items-center hidden md:gap-2 lg:gap-8 px-8"
   >
     <template v-for="item in navItems" :key="item">
       <NavItem :navItem="item" />

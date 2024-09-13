@@ -38,7 +38,7 @@ export default {
       <div class="w-12 h-0 border-2 border-[#FDCE83] rounded-xl"></div>
     </div>
 
-    <div class="flex justify-center gap-10 h-full lg:flex-row flex-col">
+    <div class="flex justify-center items-center gap-10 h-full lg:flex-row flex-col">
       <card v-for="card in cards" :key="card.id" :cardData="card" />
     </div>
   </div>
