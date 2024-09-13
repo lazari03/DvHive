@@ -8,9 +8,9 @@ defineProps(['header', 'subheader'])
 </script>
 
 <template>
-  <div class="bg-[#212121] md:h-screen w-full font-montserrat relative pb-5 z-10 h-full">
+  <div class="bg-[#212121] md:h-fit lg:h-screen w-full font-montserrat relative pb-5 z-10 h-full">
     <div
-      class="md:bg-[url('src/assets/images/automobile-3734397_1920.jpg')] md:bg-cover lg:bg-contain opacity-15 w-full h-full absolute z-0"
+      class="md:bg-[url('src/assets/images/automobile-3734397_1920.jpg')] lg:bg-contain opacity-15 w-full h-full absolute z-0"
     ></div>
     <div class="flex justify-between items-center relative z-30">
       <Logo class="h-20 my-2" />
@@ -21,7 +21,7 @@ defineProps(['header', 'subheader'])
         <h1 class="text-white md:text-5xl text-3xl font-semibold my-4 text-shadow shadow-[#212121]">
           {{ header }}
         </h1>
-        <h2 class="text-white md:text-lg text-shadow-sm shadow-black font-normal">
+        <h2 class="text-white md:text-2xl text-shadow-sm shadow-black font-normal">
           {{ subheader }}
         </h2>
       </div>

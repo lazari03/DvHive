@@ -26,7 +26,7 @@ app.post('/consultation-email', async (req, res) => {
 
   const mailOptions = {
     from: email,
-    to: 'deivi.cifligu@gmail.com', // Your email
+    to: 'fiona.kertalli@gmail.com', // Your email
     subject: 'New Consultation Request',
     text: `Full Name: ${full_name}\nEmail: ${email}\nPhone Number: ${phone}\nMessage: ${message}`
   }
