@@ -15,8 +15,8 @@ app.use(cors())
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'deivi.cifligu@gmail.com', // Your Gmail address
-    pass: 'qoii vrrb xpnn vgon' // Your password
+    user: 'deivi.cifligu@gmail.com', // Sender Email
+    pass: 'qoii vrrb xpnn vgon' // Sender App Password
   }
 })
 
@@ -26,7 +26,7 @@ app.post('/consultation-email', async (req, res) => {
 
   const mailOptions = {
     from: email,
-    to: 'fiona.kertalli@gmail.com', // Your email
+    to: 'fiona.kertalli@gmail.com', // Recipient Mail
     subject: 'New Consultation Request',
     text: `Full Name: ${full_name}\nEmail: ${email}\nPhone Number: ${phone}\nMessage: ${message}`
   }
