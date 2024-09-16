@@ -42,7 +42,7 @@ app.post('/consultation-email', async (req, res) => {
     from: email,
     to: process.env.RECIPIENT_EMAIL, // Recipient Mail
     subject: 'New Consultation Request',
-    priority: 'high', // Mark as high priority
+    priority: 'high',
     html: htmlContent
   }
 
