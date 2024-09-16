@@ -57,7 +57,9 @@ async function handleSubmitIntake() {
 </script>
 
 <template>
-  <div class="h-fit bg-[#F0ECE5] w-2/6 rounded-xl shadow-2xl py-6">
-    <form @submit.prevent="handleSubmitIntake" class="p-6" action=""></form>
+  <div class="h-fit bg-[#F0ECE5] w-full rounded-xl shadow-2xl py-6">
+    <form @submit.prevent="handleSubmitIntake" class="p-6" action="">
+        
+    </form>
   </div>
 </template>
