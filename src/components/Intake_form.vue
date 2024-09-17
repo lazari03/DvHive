@@ -158,8 +158,8 @@ async function handleSubmitIntake() {
             class="w-full h-12 rounded-md bg-[#D9D9D9] p-3 focus:border-[#212121] focus:border-solid focus:border-2 focus:outline-none"
           >
             <option value="">Select Claim Type</option>
-            <option value="accident">Diminished Value</option>
-            <option value="theft">Total Loss</option>
+            <option value="Diminished Value">Diminished Value</option>
+            <option value="Total Loss">Total Loss</option>
           </select>
           <label for="vehicleDetails">Vehicle Details *</label>
           <div class="flex flex-row w-full gap-2">
