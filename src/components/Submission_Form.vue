@@ -23,12 +23,12 @@ const formData = ref({
 })
 
 async function handleSubmit() {
-  formData.value.phone = iti.value.getNumber()
+  // formData.value.phone = iti.value.getNumber()
 
-  if (!iti.value.isValidNumber()) {
-    alert('Invalid phone number.')
-    return
-  }
+  // if (!iti.value.isValidNumber()) {
+  //   alert('Invalid phone number.')
+  //   return
+  // }
 
   try {
     const response = await axios.post('http://localhost:3000/consultation-email', formData.value)
@@ -75,13 +75,16 @@ async function handleSubmit() {
         required
       ></textarea>
       <div class="flex justify-center">
-        <button
+        <button type="submit" class="w-fit p-2 h-10 rounded-md bg-[#212121] text-white">
+          Receive free consultation
+        </button>
+        <!-- <button
           type="submit"
           @click="validatePhone()"
           class="w-fit p-2 h-10 rounded-md bg-[#212121] text-white"
         >
           Receive free consultation
-        </button>
+        </button> -->
       </div>
     </form>
   </div>
