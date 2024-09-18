@@ -99,10 +99,7 @@ async function handleSubmitIntake() {
   }
 
   try {
-    const response = await axios.post(
-      'https://dvhiveapi.onrender.com/intake-email',
-      formData.value
-    )
+    const response = await axios.post('https://dvhiveapi.onrender.com/intake-email', formData.value)
     console.log('Email sent successfully:', response.data)
     alert('Email sent successfully!')
   } catch (error) {
@@ -326,6 +323,17 @@ async function handleSubmitIntake() {
             placeholder="Enter additional information here..."
             class="w-full rounded-md bg-[#D9D9D9] p-3 focus:border-[#212121] focus:border-solid focus:border-2 focus:outline-none"
           ></textarea>
+          <div class="flex flex-row gap-3 items-start">
+            <input id="checkbox" name="checkbox" type="checkbox" required />
+            <label for="checkbox" class="text-sm text-[#212121] focus:outline-none font-light"
+              >Check this box to give DVHIVE consent to send text messages related to your free
+              estimate request. Consent is not a condition to any purchase. Message and data rates
+              may apply.
+              <RouterLink to="/terms-of-use" class="underline hover:text-[#ffc971]">
+                View Terms of Use</RouterLink
+              >.
+            </label>
+          </div>
           <button
             type="submit"
             class="w-fit h-fit p-3 m-auto bg-[#212121] text-white rounded-md hover:bg-[#3A3A3A] focus:outline-none"
