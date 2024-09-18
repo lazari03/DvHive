@@ -30,7 +30,6 @@ const FooterComponent = defineAsyncComponent(() => import('./components/FooterCo
             </RouterLink>
           </span>
         </div>
-        
       </div>
     </div>
     <Intake_form />
