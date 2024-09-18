@@ -31,7 +31,10 @@ async function handleSubmit() {
   }
 
   try {
-    const response = await axios.post('http://localhost:3000/consultation-email', formData.value)
+    const response = await axios.post(
+      'https://dvhiveapi.onrender.com/consultation-email',
+      formData.value
+    )
     console.log('Email sent successfully:', response.data)
     alert('Email sent successfully!')
   } catch (error) {

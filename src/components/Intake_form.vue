@@ -99,11 +99,14 @@ async function handleSubmitIntake() {
   }
 
   try {
-    const response = await axios.post('http://localhost:3000/intake-email', formData.value)
+    const response = await axios.post(
+      'https://dvhiveapi.onrender.com/intake-email',
+      formData.value
+    )
     console.log('Email sent successfully:', response.data)
     alert('Email sent successfully!')
   } catch (error) {
-    console.error('Failed to send email:', error)
+    console.error('Failed to send email:', error.response ? error.response.data : error.message)
     alert('Failed to send email.')
   }
 }
