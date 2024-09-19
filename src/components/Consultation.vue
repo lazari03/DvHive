@@ -1,5 +1,8 @@
 <script setup>
+import { useRoute } from 'vue-router'
 import Claim_btn_consultation from './claim_btn_consultation.vue'
+
+const route = useRoute()
 </script>
 
 <template>
@@ -12,11 +15,20 @@ import Claim_btn_consultation from './claim_btn_consultation.vue'
           <span class="md:text-4xl text-2xl font-semibold text-center my-3">
             Reach out for a FREE Consultation
           </span>
-          <span class="md:text-xl text-lg text-center">
+          <span class="md:text-xl text-lg text-center" v-if="route.path !== '/intake-form'">
             To help recover your car's lost value after an accident with our fast and
             straightforward process.
           </span>
-          <Claim_btn_consultation class="z-10 drop-shadow-xl" />
+          <span class="md:text-xl text-lg text-balance text-center" v-else>
+            Our team is here to assist you in recovering your car's lost value after an accident.
+            With our fast and straightforward process, we’ll guide you every step of the way,
+            ensuring you receive the compensation you deserve. Don’t let your vehicle’s value
+            diminish let us help you restore it efficiently and effectively.</span
+          >
+          <Claim_btn_consultation
+            v-if="route.path !== '/intake-form'"
+            class="z-10 drop-shadow-xl"
+          />
         </div>
         <div
           class="w-full h-fit flex-grow rounded-md flex lg:justify-end lg:items-end md:justify-end justify-start items-start lg:h-full"
