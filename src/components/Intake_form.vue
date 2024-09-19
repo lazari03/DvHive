@@ -114,7 +114,7 @@ async function handleSubmitIntake() {
     <div class="h-fit bg-[#F0ECE5] w-full rounded-xl shadow-2xl">
       <form @submit.prevent="handleSubmitIntake" class="p-6" action="">
         <div class="flex flex-col justify-start items-start gap-5 mx-2">
-          <label for="full_name">Full Name *</label>
+          <label for="full_name">Name *</label>
           <input
             v-model="formData.full_name"
             id="full_name"
@@ -126,7 +126,7 @@ async function handleSubmitIntake() {
           />
           <div class="w-full flex flex-row gap-2">
             <div class="w-full">
-              <label for="phone">Phone *</label>
+              <label for="phone">Phone Number *</label>
               <input
                 type="tel"
                 id="phone"
@@ -196,13 +196,13 @@ async function handleSubmitIntake() {
               name="vehicleTrim"
               required
               type="text"
-              placeholder="Trim"
+              placeholder="Trim Level (SE, SE, LE, Base, etc)"
               class="w-1/4 h-12 rounded-md bg-[#D9D9D9] p-3 focus:border-[#212121] focus:border-solid focus:border-2 focus:outline-none"
             />
           </div>
           <div class="flex flex-row w-full gap-2">
             <div class="w-full">
-              <label for="vehicleMileage">Vehicle Mileage *</label>
+              <label for="vehicleMileage">Approximate mileage on accident date *</label>
               <input
                 v-model="formData.vehicleMileage"
                 id="vehicleMileage"
@@ -214,7 +214,7 @@ async function handleSubmitIntake() {
               />
             </div>
             <div class="w-full">
-              <label for="accidentDate">Accident Date *</label>
+              <label for="accidentDate">Date of Accident *</label>
               <input
                 v-model="formData.accidentDate"
                 id="accidentDate"
@@ -227,7 +227,7 @@ async function handleSubmitIntake() {
           </div>
           <div class="flex flex-row w-full gap-2">
             <div class="w-full">
-              <label for="state">State*</label>
+              <label for="state">State where the accident happened *</label>
               <select
                 v-model="formData.state"
                 id="state"
@@ -243,7 +243,7 @@ async function handleSubmitIntake() {
             </div>
 
             <div class="w-full">
-              <label for="estimatedRepair">Estimated Repair Cost *</label>
+              <label for="estimatedRepair">Estimated repair costs *</label>
               <input
                 v-model="formData.estimatedRepair"
                 id="estimatedRepair"
@@ -257,7 +257,7 @@ async function handleSubmitIntake() {
           </div>
           <div class="w-full flex flex-row gap-2">
             <div class="w-full">
-              <label for="priorAccidents">Prior Accidents *</label>
+              <label for="priorAccidents">Any prior accidents or repairs? *</label>
               <select
                 v-model="formData.priorAccidents"
                 id="priorAccidents"
@@ -271,7 +271,9 @@ async function handleSubmitIntake() {
               </select>
             </div>
             <div class="w-full">
-              <label for="prevEstimatedRepair">Previous Estimated Repair</label>
+              <label for="prevEstimatedRepair"
+                >If yes, estimated repair cost of the previous accident</label
+              >
               <input
                 v-model="formData.prevEstimatedRepair"
                 id="prevEstimatedRepair"
@@ -282,7 +284,9 @@ async function handleSubmitIntake() {
               />
             </div>
           </div>
-          <label for="leasing">Leasing</label>
+          <label for="leasing"
+            >Are you leasing your vehicle? (Vehicle will be turned back in on a set date)</label
+          >
           <div class="flex gap-3">
             <input type="radio" v-model="formData.leasing" value="yes" id="leasing_yes" />
             <label for="leasing_yes">Yes</label>
@@ -291,7 +295,7 @@ async function handleSubmitIntake() {
           </div>
           <div class="w-full flex flex-row gap-2">
             <div class="w-full">
-              <label for="insurance">Insurance Company</label>
+              <label for="insurance">Name of your insurance company?</label>
               <input
                 v-model="formData.insurance"
                 id="insurance"
@@ -302,7 +306,7 @@ async function handleSubmitIntake() {
               />
             </div>
             <div class="w-full">
-              <label for="faultInsurance">Fault Insurance</label>
+              <label for="faultInsurance">Name of at-fault insurance company?</label>
               <input
                 v-model="formData.faultInsurance"
                 id="faultInsurance"
@@ -313,9 +317,11 @@ async function handleSubmitIntake() {
               />
             </div>
           </div>
-          <label for="file">Upload File</label>
+          <label for="file"
+            >File Upload (repair estimate, supplement, final bill, total loss valuation, etc)</label
+          >
           <input id="file" name="file" type="file" />
-          <label for="message">Additional Information</label>
+          <label for="message">Any additional information to add?</label>
           <textarea
             v-model="formData.message"
             id="message"
@@ -328,9 +334,9 @@ async function handleSubmitIntake() {
             <label for="checkbox" class="text-sm text-[#212121] focus:outline-none font-light"
               >Check this box to give DVHIVE consent to send text messages related to your free
               estimate request. Consent is not a condition to any purchase. Message and data rates
-              may apply.
+              may apply. View
               <RouterLink to="/terms-of-use" class="underline hover:text-[#ffc971]">
-                View Terms of Use</RouterLink
+                Terms of Use</RouterLink
               >.
             </label>
           </div>
