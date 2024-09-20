@@ -30,7 +30,7 @@ export default {
   <div class="my-12 py-2 m-6">
     <div class="flex flex-col items-center justify-center w-full">
       <span class="text-5xl text-white lg:text-left text-center">What Our Clients say</span>
-      <span class="tetx-md text-white lg:w-2/5 text-center my-5 w-fit"
+      <span class="tetx-md text-white lg:w-3/5 text-center my-5 w-fit"
         >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores quas, veritatis atque
         dignissimos reprehenderit veniam beatae assumenda voluptate enim aliquid similique tempora
         voluptas blanditiis quia vel laudantium recusandae? Nisi, culpa!</span

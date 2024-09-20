@@ -33,7 +33,7 @@ const legal = [
         <span
           v-for="service in services"
           :key="service.text"
-          class="text-white text-sm md:text-md my-2"
+          class="text-white text-sm md:text-md my-2 cursor-pointer"
           @click="router.push(service.route)"
           >{{ service.text }}</span
         >
@@ -57,7 +57,7 @@ const legal = [
         <span
           v-for="item in legal"
           :key="item.text"
-          class="text-white text-sm md:text-md my-2"
+          class="text-white text-sm md:text-md my-2 cursor-pointer"
           @click="router.push(item.route)"
           >{{ item.text }}</span
         >

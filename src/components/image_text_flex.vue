@@ -9,8 +9,10 @@ defineProps({
   <div
     class="w-fill h-fit m-12 flex justify-center items-center flex-col-reverse md:flex-row gap-8 md:gap-0"
   >
-    <div class="md:w-3/5 text-white w-full">
-      <h1 class="text-center text-4xl my-4">
+    <div class="md:w-3/5 text-white w-full h-fit relative">
+      <h1
+        class="text-center text-4xl my-4 'after:content-[\'\'] after:absolute after:bottom-0 after:left-1/2 after:w-1/6 after:h-[3px] after:bg-[#FDCE83] after:rounded-full after:transform after:-translate-x-1/2 after:transition-all':"
+      >
         {{ header }}
       </h1>
     </div>

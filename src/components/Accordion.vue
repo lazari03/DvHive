@@ -4,9 +4,9 @@ import { ref, onMounted } from 'vue'
 const accordionOpen = ref<boolean>(false)
 
 const props = defineProps<{
-  title: string,
-  id: string,
-  active?: boolean,
+  title: string
+  id: string
+  active?: boolean
 }>()
 
 onMounted(() => {
@@ -53,9 +53,11 @@ onMounted(() => {
         "
       >
         <div class="overflow-hidden">
-          <p class="pb-3 mx-2 w-5/6 font-semibold" style="white-space: break-spaces">
-            <slot />
-          </p>
+          <div class="m-4">
+            <p class="pb-3 mx-2 w-5/6 font-semibold" style="white-space: break-spaces">
+              <slot />
+            </p>
+          </div>
         </div>
       </div>
     </div>
