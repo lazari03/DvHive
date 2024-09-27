@@ -19,7 +19,7 @@ const route = useRoute()
             To help recover your car's lost value after an accident with our fast and
             straightforward process.
           </span>
-          <span class="md:text-xl text-lg text-balance text-center" v-else>
+          <span class="md:text-xl text-lg text-balance text-center p-2" v-else>
             Our team is here to assist you in recovering your car's lost value after an accident.
             With our fast and straightforward process, we’ll guide you every step of the way,
             ensuring you receive the compensation you deserve. Don’t let your vehicle’s value

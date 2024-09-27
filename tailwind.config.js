@@ -18,7 +18,8 @@ module.exports = {
         montserrat: ['Montserrat', 'sans-serif']
       },
       backgroundImage: {
-        'custom-gradient': 'linear-gradient(-140deg, #FDCE83, #FFE6BF)'
+        'custom-gradient': 'linear-gradient(-140deg, #FDCE83, #FFE6BF)',
+        'custom-gradient-2': 'linear-gradient(75deg, #EDD5B0 0%, #D3A357 52.5%)'
       },
       textShadow: {
         sm: '0 1px 2px var(--tw-shadow-color)',

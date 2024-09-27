@@ -4,6 +4,7 @@ import PricingCard from './PricingCard.vue'
 const cards = [
   {
     price: 0,
+    title: 'Free Consultation',
     features: [
       'Free total loss and diminished value quote',
       'Discover your vehicle’s current market value',
@@ -12,6 +13,7 @@ const cards = [
   },
   {
     price: 350,
+    title: 'Diminished Value Appraisal',
     features: [
       'Certified diminished value appraisal',
       'Price guides and market data analysis',
@@ -24,6 +26,7 @@ const cards = [
   },
   {
     price: 399,
+    title: 'Total Loss Appraisal',
     features: [
       'Certified fair market value appraisal',
       'Price guides and market data analysis',
@@ -43,6 +46,7 @@ const cards = [
         v-for="(card, index) in cards"
         :key="index"
         :price="card.price"
+        :title="card.title"
         :features="card.features"
       />
     </div>

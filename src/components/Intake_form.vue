@@ -124,7 +124,7 @@ async function handleSubmitIntake() {
             placeholder="Full Name"
             class="w-full h-12 rounded-md bg-[#D9D9D9] p-3 focus:border-[#212121] focus:border-solid focus:border-2 focus:outline-none"
           />
-          <div class="w-full flex flex-row gap-2">
+          <div class="w-full flex md:flex-row flex-col gap-2">
             <div class="w-full">
               <label for="phone">Phone Number *</label>
               <input
@@ -162,7 +162,7 @@ async function handleSubmitIntake() {
             <option value="Total Loss">Total Loss</option>
           </select>
           <label for="vehicleDetails">Vehicle Details *</label>
-          <div class="flex flex-row w-full gap-2">
+          <div class="flex lg:flex-row flex-col w-full gap-2">
             <input
               v-model="formData.vehicleYear"
               id="vehicleYear"
@@ -170,7 +170,7 @@ async function handleSubmitIntake() {
               type="text"
               placeholder="Year"
               required
-              class="w-1/4 h-12 rounded-md bg-[#D9D9D9] p-3 focus:border-[#212121] focus:border-solid focus:border-2 focus:outline-none"
+              class="lg:w-1/4 w-full h-12 rounded-md bg-[#D9D9D9] p-3 focus:border-[#212121] focus:border-solid focus:border-2 focus:outline-none"
             />
             <input
               v-model="formData.vehicleMake"
@@ -179,7 +179,7 @@ async function handleSubmitIntake() {
               type="text"
               placeholder="Make"
               required
-              class="w-1/4 h-12 rounded-md bg-[#D9D9D9] p-3 focus:border-[#212121] focus:border-solid focus:border-2 focus:outline-none"
+              class="lg:w-1/4 w-full h-12 rounded-md bg-[#D9D9D9] p-3 focus:border-[#212121] focus:border-solid focus:border-2 focus:outline-none"
             />
             <input
               v-model="formData.vehicleModel"
@@ -188,7 +188,7 @@ async function handleSubmitIntake() {
               type="text"
               required
               placeholder="Model"
-              class="w-1/4 h-12 rounded-md bg-[#D9D9D9] p-3 focus:border-[#212121] focus:border-solid focus:border-2 focus:outline-none"
+              class="lg:w-1/4 w-full h-12 rounded-md bg-[#D9D9D9] p-3 focus:border-[#212121] focus:border-solid focus:border-2 focus:outline-none"
             />
             <input
               v-model="formData.vehicleTrim"
@@ -197,10 +197,10 @@ async function handleSubmitIntake() {
               required
               type="text"
               placeholder="Trim Level (SE, SE, LE, Base, etc)"
-              class="w-1/4 h-12 rounded-md bg-[#D9D9D9] p-3 focus:border-[#212121] focus:border-solid focus:border-2 focus:outline-none"
+              class="lg:w-1/4 w-full h-12 rounded-md bg-[#D9D9D9] p-3 focus:border-[#212121] focus:border-solid focus:border-2 focus:outline-none"
             />
           </div>
-          <div class="flex flex-row w-full gap-2">
+          <div class="flex lg:flex-row flex-col w-full gap-2">
             <div class="w-full">
               <label for="vehicleMileage">Approximate mileage on accident date *</label>
               <input
@@ -210,7 +210,7 @@ async function handleSubmitIntake() {
                 required
                 type="text"
                 placeholder="Enter Vehicle Mileage"
-                class="w-full h-12 rounded-md bg-[#D9D9D9] p-3 focus:border-[#212121] focus:border-solid focus:border-2 focus:outline-none"
+                class="lg:w-1/4 w-full h-12 rounded-md bg-[#D9D9D9] p-3 focus:border-[#212121] focus:border-solid focus:border-2 focus:outline-none"
               />
             </div>
             <div class="w-full">
@@ -225,7 +225,7 @@ async function handleSubmitIntake() {
               />
             </div>
           </div>
-          <div class="flex flex-row w-full gap-2">
+          <div class="flex lg:flex-row flex-col w-full gap-2">
             <div class="w-full">
               <label for="state">State where the accident happened *</label>
               <select
@@ -255,7 +255,7 @@ async function handleSubmitIntake() {
               />
             </div>
           </div>
-          <div class="w-full flex flex-row gap-2">
+          <div class="w-full flex lg:flex-row flex-col gap-2">
             <div class="w-full">
               <label for="priorAccidents">Any prior accidents or repairs? *</label>
               <select
@@ -293,7 +293,7 @@ async function handleSubmitIntake() {
             <input type="radio" v-model="formData.leasing" value="no" id="leasing_no" />
             <label for="leasing_no">No</label>
           </div>
-          <div class="w-full flex flex-row gap-2">
+          <div class="w-full flex lg:flex-row flex-col gap-2">
             <div class="w-full">
               <label for="insurance">Name of your insurance company?</label>
               <input

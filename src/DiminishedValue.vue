@@ -7,6 +7,9 @@ const License_banner = defineAsyncComponent(() => import('./components/license_b
 const FooterComponent = defineAsyncComponent(() => import('./components/FooterComponent.vue'))
 const FAQ = defineAsyncComponent(() => import('./components/FAQ.vue'))
 const Text_middle = defineAsyncComponent(() => import('./components/text_middle.vue'))
+const DiminishedValue_Types = defineAsyncComponent(
+  () => import('./components/DiminishedValue_Types.vue')
+)
 </script>
 
 <template>
@@ -17,9 +20,23 @@ const Text_middle = defineAsyncComponent(() => import('./components/text_middle.
       title="Diminished Value"
       subtitle="lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
     />
-    <Image_text_flex 
-    header="An example of a diminished value claim"
-    image="src/assets/images/pexels-artyom-kulakov-1190754-2265634.png" />
+    <Image_text_flex
+      header="An example of a diminished value claim"
+      image="src/assets/images/pexels-artyom-kulakov-1190754-2265634.png"
+    />
+    <div class="m-6 flex items-center justify-center flex-col w-fill gap-4">
+      <span class="text-xl text-white w-5/6 font-light md:text-left text-center">
+        lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste
+        natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+        quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+      </span>
+      <span class="text-xl text-white w-5/6 font-light md:text-left text-center">
+        lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste
+        natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+        quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+      </span>
+    </div>
+    <DiminishedValue_Types />
     <FAQ />
     <FooterComponent />
   </div>
