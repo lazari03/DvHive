@@ -38,7 +38,7 @@ const FooterComponent = defineAsyncComponent(() => import('./components/FooterCo
       header="How we help in a diminished value claim"
       subheader="lorem ipsum dolor sit amet, consectetur adipiscing elit,
       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-      image="src/assets/images/pexels-artyom-kulakov-1190754-2265634.png"
+      image="src/assets/images/SideDent.jpg"
     />
     <steps_to_claim />
     <Claim_btn />

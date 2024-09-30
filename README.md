@@ -73,11 +73,11 @@ DvHive
 │  │  │  ├─ Montserrat-Italic-VariableFont_wght.ttf
 │  │  │  └─ Montserrat-VariableFont_wght.ttf
 │  │  ├─ images
-│  │  │  ├─ automobile-3734397_1920.jpg
+│  │  │  ├─ HeroBg.jpg
 │  │  │  ├─ consultation_crash.png
 │  │  │  ├─ consultation_crash2.png
 │  │  │  ├─ honyecomb.svg
-│  │  │  └─ pexels-artyom-kulakov-1190754-2265634.png
+│  │  │  └─ text_middle.png
 │  │  ├─ logo.svg
 │  │  └─ main.css
 │  ├─ components

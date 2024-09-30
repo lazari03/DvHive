@@ -10,10 +10,12 @@ defineProps(['header', 'subheader'])
 <template>
   <div class="bg-[#212121] md:h-fit lg:h-screen w-full font-montserrat relative pb-5 z-10 h-full">
     <div
-      class="md:bg-[url('src/assets/images/automobile-3734397_1920.jpg')] lg:bg-contain opacity-15 w-full h-full absolute z-0"
+      class="md:bg-[url('src/assets/images/HeroBg.jpg')] lg:bg-contain opacity-50 w-full h-full absolute z-0"
     ></div>
     <div class="flex justify-between items-center relative z-30">
-      <Logo class="h-20 my-2" />
+      <RouterLink to="/">
+        <Logo class="h-20 my-2" />
+      </RouterLink>
       <NavBar />
     </div>
     <div class="flex justify-between p-6 items-center h-fit relative z-10 lg:flex-row flex-col">

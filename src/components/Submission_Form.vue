@@ -32,7 +32,7 @@ async function handleSubmit() {
 
   try {
     const response = await axios.post(
-      'https://dvhiveapi.onrender.com/consultation-email',
+       'https://dvhiveapi.onrender.com/consultation-email',
       formData.value
     )
     console.log('Email sent successfully:', response.data)
@@ -81,7 +81,7 @@ async function handleSubmit() {
         <button
           type="submit"
           @click="validatePhone()"
-          class="w-fit p-2 h-10 rounded-md bg-[#212121] text-white"
+          class="w-fit p-2 h-10 rounded-md bg-[#212121] text-white uppercase font-extrabold "
         >
           Receive free consultation
         </button>

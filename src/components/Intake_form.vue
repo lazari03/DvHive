@@ -4,109 +4,140 @@ import { ref, onMounted } from 'vue'
 import 'intl-tel-input/build/css/intlTelInput.css'
 import intlTelInput from 'intl-tel-input'
 
+
 const iti = ref(null)
+const fileInput = ref(null)
+
 
 onMounted(() => {
-  const input = document.querySelector('#phone')
-  iti.value = intlTelInput(input, {
-    utilsScript: '/node_modules/intl-tel-input/build/js/utils.js',
-    containerClass: 'w-full',
-    initialCountry: 'us'
-  })
+ const input = document.querySelector('#phone')
+ iti.value = intlTelInput(input, {
+   utilsScript: '/node_modules/intl-tel-input/build/js/utils.js',
+   containerClass: 'w-full',
+   initialCountry: 'us'
+ })
 })
+
 
 const formData = ref({
-  full_name: '',
-  email: '',
-  phone: '',
-  claimType: '',
-  vehicleYear: '',
-  vehicleMake: '',
-  vehicleModel: '',
-  vehicleTrim: '',
-  vehicleMileage: '',
-  accidentDate: '',
-  state: '',
-  estimatedRepair: '',
-  priorAccidents: '',
-  prevEstimatedRepair: '',
-  leasing: '',
-  insurance: '',
-  faultInsurance: '',
-  message: '',
-  file: ''
+ full_name: '',
+ email: '',
+ phone: '',
+ claimType: '',
+ vehicleYear: '',
+ vehicleMake: '',
+ vehicleModel: '',
+ vehicleTrim: '',
+ vehicleMileage: '',
+ accidentDate: '',
+ state: '',
+ estimatedRepair: '',
+ priorAccidents: '',
+ prevEstimatedRepair: '',
+ leasing: '',
+ insurance: '',
+ faultInsurance: '',
+ message: '',
+ file: ''
 })
 
+
 const states = [
-  { name: 'Alabama', code: 'AL' },
-  { name: 'Alaska', code: 'AK' },
-  { name: 'Arizona', code: 'AZ' },
-  { name: 'Arkansas', code: 'AR' },
-  { name: 'California', code: 'CA' },
-  { name: 'Colorado', code: 'CO' },
-  { name: 'Connecticut', code: 'CT' },
-  { name: 'Delaware', code: 'DE' },
-  { name: 'Florida', code: 'FL' },
-  { name: 'Georgia', code: 'GA' },
-  { name: 'Hawaii', code: 'HI' },
-  { name: 'Idaho', code: 'ID' },
-  { name: 'Illinois', code: 'IL' },
-  { name: 'Indiana', code: 'IN' },
-  { name: 'Iowa', code: 'IA' },
-  { name: 'Kansas', code: 'KS' },
-  { name: 'Kentucky', code: 'KY' },
-  { name: 'Louisiana', code: 'LA' },
-  { name: 'Maine', code: 'ME' },
-  { name: 'Maryland', code: 'MD' },
-  { name: 'Massachusetts', code: 'MA' },
-  { name: 'Michigan', code: 'MI' },
-  { name: 'Minnesota', code: 'MN' },
-  { name: 'Mississippi', code: 'MS' },
-  { name: 'Missouri', code: 'MO' },
-  { name: 'Montana', code: 'MT' },
-  { name: 'Nebraska', code: 'NE' },
-  { name: 'Nevada', code: 'NV' },
-  { name: 'New Hampshire', code: 'NH' },
-  { name: 'New Jersey', code: 'NJ' },
-  { name: 'New Mexico', code: 'NM' },
-  { name: 'New York', code: 'NY' },
-  { name: 'North Carolina', code: 'NC' },
-  { name: 'North Dakota', code: 'ND' },
-  { name: 'Ohio', code: 'OH' },
-  { name: 'Oklahoma', code: 'OK' },
-  { name: 'Oregon', code: 'OR' },
-  { name: 'Pennsylvania', code: 'PA' },
-  { name: 'Rhode Island', code: 'RI' },
-  { name: 'South Carolina', code: 'SC' },
-  { name: 'South Dakota', code: 'SD' },
-  { name: 'Tennessee', code: 'TN' },
-  { name: 'Texas', code: 'TX' },
-  { name: 'Utah', code: 'UT' },
-  { name: 'Vermont', code: 'VT' },
-  { name: 'Virginia', code: 'VA' },
-  { name: 'Washington', code: 'WA' },
-  { name: 'West Virginia', code: 'WV' },
-  { name: 'Wisconsin', code: 'WI' },
-  { name: 'Wyoming', code: 'WY' }
+ { name: 'Alabama', code: 'AL' },
+ { name: 'Alaska', code: 'AK' },
+ { name: 'Arizona', code: 'AZ' },
+ { name: 'Arkansas', code: 'AR' },
+ { name: 'California', code: 'CA' },
+ { name: 'Colorado', code: 'CO' },
+ { name: 'Connecticut', code: 'CT' },
+ { name: 'Delaware', code: 'DE' },
+ { name: 'Florida', code: 'FL' },
+ { name: 'Georgia', code: 'GA' },
+ { name: 'Hawaii', code: 'HI' },
+ { name: 'Idaho', code: 'ID' },
+ { name: 'Illinois', code: 'IL' },
+ { name: 'Indiana', code: 'IN' },
+ { name: 'Iowa', code: 'IA' },
+ { name: 'Kansas', code: 'KS' },
+ { name: 'Kentucky', code: 'KY' },
+ { name: 'Louisiana', code: 'LA' },
+ { name: 'Maine', code: 'ME' },
+ { name: 'Maryland', code: 'MD' },
+ { name: 'Massachusetts', code: 'MA' },
+ { name: 'Michigan', code: 'MI' },
+ { name: 'Minnesota', code: 'MN' },
+ { name: 'Mississippi', code: 'MS' },
+ { name: 'Missouri', code: 'MO' },
+ { name: 'Montana', code: 'MT' },
+ { name: 'Nebraska', code: 'NE' },
+ { name: 'Nevada', code: 'NV' },
+ { name: 'New Hampshire', code: 'NH' },
+ { name: 'New Jersey', code: 'NJ' },
+ { name: 'New Mexico', code: 'NM' },
+ { name: 'New York', code: 'NY' },
+ { name: 'North Carolina', code: 'NC' },
+ { name: 'North Dakota', code: 'ND' },
+ { name: 'Ohio', code: 'OH' },
+ { name: 'Oklahoma', code: 'OK' },
+ { name: 'Oregon', code: 'OR' },
+ { name: 'Pennsylvania', code: 'PA' },
+ { name: 'Rhode Island', code: 'RI' },
+ { name: 'South Carolina', code: 'SC' },
+ { name: 'South Dakota', code: 'SD' },
+ { name: 'Tennessee', code: 'TN' },
+ { name: 'Texas', code: 'TX' },
+ { name: 'Utah', code: 'UT' },
+ { name: 'Vermont', code: 'VT' },
+ { name: 'Virginia', code: 'VA' },
+ { name: 'Washington', code: 'WA' },
+ { name: 'West Virginia', code: 'WV' },
+ { name: 'Wisconsin', code: 'WI' },
+ { name: 'Wyoming', code: 'WY' }
 ]
 
+
 async function handleSubmitIntake() {
-  formData.value.phone = iti.value.getNumber()
+ formData.value.phone = iti.value.getNumber()
 
-  if (!iti.value.isValidNumber()) {
-    alert('Invalid phone number.')
-    return
-  }
 
-  try {
-    const response = await axios.post('https://dvhiveapi.onrender.com/intake-email', formData.value)
-    console.log('Email sent successfully:', response.data)
-    alert('Email sent successfully!')
-  } catch (error) {
-    console.error('Failed to send email:', error.response ? error.response.data : error.message)
-    alert('Failed to send email.')
-  }
+ if (!iti.value.isValidNumber()) {
+   alert('Invalid phone number.')
+   return
+ }
+
+
+ const form = new FormData()
+ Object.keys(formData.value).forEach((key) => {
+   form.append(key, formData.value[key])
+ })
+
+
+ if (fileInput.value.files.length > 0) {
+   for (let i = 0; i < fileInput.value.files.length; i++) {
+     form.append('file', fileInput.value.files[i])
+   }
+ }
+
+
+ try {
+   const response = await axios.post('https://dvhiveapi.onrender.com/intake-email', form, {
+     headers: {
+       'Content-Type': 'multipart/form-data'
+     }
+   })
+   console.log('Email sent successfully:', response.data)
+   alert('Email sent successfully!')
+ } catch (error) {
+   console.error('Failed to send email:', error.response ? error.response.data : error.message)
+   alert('Failed to send email.')
+ }
 }
+
+
+const handleFileChange = () => {
+ console.log('File changed!')
+}
+
 </script>
 
 <template>
@@ -201,7 +232,7 @@ async function handleSubmitIntake() {
             />
           </div>
           <div class="flex lg:flex-row flex-col w-full gap-2">
-            <div class="w-full">
+            <div class="w-full flex-col flex">
               <label for="vehicleMileage">Approximate mileage on accident date *</label>
               <input
                 v-model="formData.vehicleMileage"
@@ -210,7 +241,7 @@ async function handleSubmitIntake() {
                 required
                 type="text"
                 placeholder="Enter Vehicle Mileage"
-                class="lg:w-1/4 w-full h-12 rounded-md bg-[#D9D9D9] p-3 focus:border-[#212121] focus:border-solid focus:border-2 focus:outline-none"
+                class=" w-full h-12 rounded-md bg-[#D9D9D9] p-3 focus:border-[#212121] focus:border-solid focus:border-2 focus:outline-none"
               />
             </div>
             <div class="w-full">
@@ -318,9 +349,9 @@ async function handleSubmitIntake() {
             </div>
           </div>
           <label for="file"
-            >File Upload (repair estimate, supplement, final bill, total loss valuation, etc)</label
-          >
-          <input id="file" name="file" type="file" />
+           >File Upload (repair estimate, supplement, final bill, total loss valuation, etc)</label
+         >
+         <input type="file" ref="fileInput" @change="handleFileChange" multiple />
           <label for="message">Any additional information to add?</label>
           <textarea
             v-model="formData.message"

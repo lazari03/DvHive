@@ -10,7 +10,7 @@ import White_bee from './icons/white_bee.vue'
     >
       <White_bee class="pt-2 fill-white" />
       <span
-        class="relative z-10 text-[#212121] lg:text-xl md:text-2xl sm:text-3xl text-sm font-semibold mx-4"
+        class="relative z-10 text-[#212121] lg:text-xl md:text-2xl sm:text-3xl text-sm font-semibold mx-4 uppercase"
       >
         Claim Your Free Consultation
       </span>

@@ -62,9 +62,7 @@ const legal = [
           >{{ item.text }}</span
         >
         <span class="mt-6 py-6 text-white hidden md:block md:w-full">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam omnis, quae, itaque
-          dolores quas, eveniet expedita nesciunt eos pariatur quam ullam at exercitationem. Soluta
-          id minima accusantium facere repellat harum.
+          If you think your vehicle’s value has decreased following a recent accident, you’ve come to the right place. We specialize in helping you document and recover the loss in value, ensuring you get the compensation you deserve. Our expert team is here to guide you through every step of the process, making it as simple and stress-free as possible.
         </span>
       </div>
     </div>

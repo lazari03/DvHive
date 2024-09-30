@@ -1,16 +1,18 @@
 <script setup>
 import { defineAsyncComponent } from 'vue'
 
-const Hero = defineAsyncComponent(() => import('./components/Hero.vue'))
-const License_banner = defineAsyncComponent(() => import('./components/license_banner.vue'))
 const FooterComponent = defineAsyncComponent(() => import('./components/FooterComponent.vue'))
 const FAQ = defineAsyncComponent(() => import('./components/FAQ.vue'))
+const NavBar = defineAsyncComponent(() => import('./components/NavBar.vue'))
+const Logo = defineAsyncComponent(() => import('./components/icons/Logo.vue'))
 </script>
 
 <template>
   <div class="bg-[#212121] font-montserrat font-medium relative">
-    <Hero header="FAQ" subheader="Subheader" />
-    <License_banner />
+    <div class="flex justify-between items-center relative z-30">
+      <Logo class="h-20 my-2" />
+      <NavBar />
+    </div>
     <FAQ />
     <FooterComponent />
   </div>

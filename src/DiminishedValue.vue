@@ -22,19 +22,13 @@ const DiminishedValue_Types = defineAsyncComponent(
     />
     <Image_text_flex
       header="An example of a diminished value claim"
-      image="src/assets/images/pexels-artyom-kulakov-1190754-2265634.png"
+      image="src/assets/images/SideCrash.jpg"
     />
-    <div class="m-6 flex items-center justify-center flex-col w-fill gap-4">
-      <span class="text-xl text-white w-5/6 font-light md:text-left text-center">
-        lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste
-        natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-        quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-      </span>
-      <span class="text-xl text-white w-5/6 font-light md:text-left text-center">
-        lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste
-        natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-        quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-      </span>
+    <div class=" flex items-center justify-center flex-col w-fill gap-4">
+      <Text_middle 
+        subtitle="lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. <br><br> lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        
+      />
     </div>
     <DiminishedValue_Types />
     <FAQ />
