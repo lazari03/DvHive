@@ -21,7 +21,6 @@ const FooterComponent = defineAsyncComponent(() => import('./components/FooterCo
       specializing in helping you reclaim your vehicle’s value after an accident.
       Our diminished value appraisal report will effectively document and support your claim"
     />
-    <license_banner />
     <div>
       <Logo_Large class="absolute z-0 mix-blend-screen" />
       <text_middle

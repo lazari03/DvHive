@@ -7,6 +7,7 @@ import Contact from './Contact.vue'
 import IntakeForm from './IntakeForm.vue'
 import PrivacyPolicy from './PrivacyPolicy.vue'
 import TermsOfUse from './TermsOfUse.vue'
+import test from './test.vue'
 
 const routes = [
   { path: '/', component: Home },
@@ -16,7 +17,8 @@ const routes = [
   { path: '/contact', component: Contact },
   { path: '/intake-form', component: IntakeForm },
   { path: '/privacy-policy', component: PrivacyPolicy },
-  { path: '/terms-of-use', component: TermsOfUse},
+  { path: '/terms-of-use', component: TermsOfUse },
+  { path: '/test', component: test }
 ]
 
 const router = createRouter({

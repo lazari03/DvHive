@@ -13,10 +13,12 @@ defineProps({
   <div class="flex flex-col w-full bg-[#FDCE83] justify-between rounded-2xl shadow">
     <div class="p-6">
       <div
-        class="flex items-center justify-between bg-custom-gradient-2 px-4 py-12 rounded-xl overflow-clip relative"
+        class="flex items-center justify-between h-40 bg-custom-gradient-2 px-4 py-12 rounded-xl overflow-clip relative"
       >
-        <span class="text-2xl font-semibold text-white z-10">${{ price }}</span>
-        <span class="text-xl font-semibold z-10 text-center">{{ title }}</span>
+        <div class="flex flex-col w-full justify-center items-center">
+          <span class="text-xl font-semibold z-10 text-white text-center">{{ title }}</span>
+          <span class="text-4xl font-bold text-black z-10">${{ price }}</span>
+        </div>
         <Logo_black class="w-16 h-16 z-10" />
         <div
           class="absolute top-0 left-0 h-full rounded-xl z-0 bg-[url('src/assets/images/honyecomb.svg')] w-[150%] bg-cover bg-center bg-repeat mix-blend-overlay"

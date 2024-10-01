@@ -81,7 +81,7 @@ async function handleSubmit() {
         <button
           type="submit"
           @click="validatePhone()"
-          class="w-fit p-2 h-10 rounded-md bg-[#212121] text-white uppercase font-extrabold "
+          class="w-fit p-2 h-10 rounded-md bg-[#FDCE83] text-black uppercase font-extrabold "
         >
           Receive free consultation
         </button>

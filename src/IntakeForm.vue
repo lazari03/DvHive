@@ -1,19 +1,15 @@
 <script setup>
 import { defineAsyncComponent } from 'vue'
 import Intake_form from './components/Intake_form.vue'
-import NavBar from './components/NavBar.vue'
-import Logo from './components/icons/Logo.vue'
 import Consultation from './components/Consultation.vue'
+import Navigation from './components/Nav.vue'
 
 const FooterComponent = defineAsyncComponent(() => import('./components/FooterComponent.vue'))
 </script>
 
 <template>
   <div class="bg-[#212121] font-montserrat font-medium relative">
-    <div class="flex justify-between items-center relative z-30">
-      <Logo class="h-20 my-2" />
-      <NavBar />
-    </div>
+    <Navigation />
     <div class="flex flex-col w-full m-0 md:m-6 text-2xl text-white">
       <div class="m-0 md:m-6">
         <div class="flex flex-col gap-3 relative">

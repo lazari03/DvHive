@@ -12,12 +12,15 @@ const navItems = [
 ]
 </script>
 <template>
-  <div
-    class="bg-[#F0ECE5] w-fit h-11 rounded-full m-6 lg:flex justify-center items-center hidden lg:gap-8 px-8"
-  >
-    <template v-for="item in navItems" :key="item">
-      <NavItem :navItem="item" />
-    </template>
+  <div class="flex flex-row gap-2 items-center">
+    <div
+      class="bg-[#F0ECE5] w-fit h-11 rounded-full m-6 lg:flex justify-center items-center hidden lg:gap-8 px-8"
+    >
+      <template v-for="item in navItems" :key="item">
+        <NavItem :navItem="item" />
+      </template>
+    </div>
   </div>
+
   <Dropdown :items="navItems" class="z-30 relative lg:hidden" />
 </template>
