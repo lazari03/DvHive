@@ -25,11 +25,17 @@ const legal = [
   <div class="w-screen border-t-2 border-white mt-5 relative">
     <div class="flex w-fit gap-2 items-center p-6 z-10">
       <Logo class="w-12 h-auto" />
-      <span class="text-white text-5xl"> DvHive </span>
+      <div class="flex flex-col gap-0">
+        <h1 class="text-white text-xl font-semibold">DVHIVE</h1>
+        <h2 class="text-white text-xs font-light">
+          Diminished value<br />
+          experts
+        </h2>
+      </div>
     </div>
     <div class="w-3/4 h-fit p-6 py-4 z-10 flex gap-6">
       <div class="flex flex-col w-1/2">
-        <span class="text-white text-xl md:text-4xl my-4"> Services </span>
+        <span class="text-[#FDCE83] text-xl md:text-4xl my-4"> Services </span>
         <span
           v-for="service in services"
           :key="service.text"
@@ -39,9 +45,12 @@ const legal = [
         >
         <div class="flex pt-6 mt-12 gap-6">
           <div class="flex flex-col gap-4 w-fit">
-            <font-awesome-icon icon="phone" class="text-white text-xl lg:text-2xl" />
-            <font-awesome-icon :icon="['far', 'envelope']" class="text-white text-xl lg:text-2xl" />
-            <font-awesome-icon icon="location-dot" class="text-white text-xl lg:text-2xl" />
+            <font-awesome-icon icon="phone" class="text-[#FDCE83] text-xl lg:text-2xl" />
+            <font-awesome-icon
+              :icon="['far', 'envelope']"
+              class="text-[#FDCE83] text-xl lg:text-2xl"
+            />
+            <font-awesome-icon icon="location-dot" class="text-[#FDCE83] text-xl lg:text-2xl" />
           </div>
           <div class="flex flex-col gap-4 justify-center">
             <a href="tel:" class="text-white text-sm lg:text-lg w-fit"> +1 (123)-456-7890</a>
@@ -53,7 +62,7 @@ const legal = [
         </div>
       </div>
       <div class="flex flex-col w-1/2">
-        <span class="text-white text-xl md:text-4xl my-4"> Legal </span>
+        <span class="text-[#FDCE83] text-xl md:text-4xl my-4"> Legal </span>
         <span
           v-for="item in legal"
           :key="item.text"
@@ -62,7 +71,10 @@ const legal = [
           >{{ item.text }}</span
         >
         <span class="mt-6 py-6 text-white hidden md:block md:w-full">
-          If you think your vehicle’s value has decreased following a recent accident, you’ve come to the right place. We specialize in helping you document and recover the loss in value, ensuring you get the compensation you deserve. Our expert team is here to guide you through every step of the process, making it as simple and stress-free as possible.
+          If you think your vehicle’s value has decreased following a recent accident, you’ve come
+          to the right place. We specialize in helping you document and recover the loss in value,
+          ensuring you get the compensation you deserve. Our expert team is here to guide you
+          through every step of the process, making it as simple and stress-free as possible.
         </span>
       </div>
     </div>

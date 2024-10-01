@@ -4,8 +4,6 @@ import FAQ from './components/FAQ.vue'
 import Text_middle from './components/text_middle.vue'
 import PricingCardContainer from './components/PricingCardContainer.vue'
 import Consultation from './components/Consultation.vue'
-import NavBar from './components/NavBar.vue'
-import Logo from './components/icons/Logo.vue'
 import Navigation from './components/Nav.vue'
 
 const FooterComponent = defineAsyncComponent(() => import('./components/FooterComponent.vue'))

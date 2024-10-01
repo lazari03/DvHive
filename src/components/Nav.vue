@@ -3,11 +3,13 @@ import NavBar from './NavBar.vue'
 import Logo from './icons/Logo.vue'
 </script>
 <template>
-  <div class="relative z-30">
-    <div class="w-full h-fit flex flex-row justify-between items-center p-3 uppercase">
-      <div class="flex-row flex w-fit h-fit items-center">
+  <div class="relative z-30 scale-90">
+    <div
+      class="w-full h-fit flex flex-row justify-between items-center p-3 uppercase"
+    >
+      <div class="flex-row flex w-fit h-fit items-center gap-2">
         <RouterLink to="/">
-          <Logo class="h-20 w-14 ml-6" />
+          <Logo class="w-12 h-auto" />
         </RouterLink>
         <div class="flex flex-col gap-0">
           <h1 class="text-white text-xl font-semibold">DVHIVE</h1>
@@ -21,7 +23,7 @@ import Logo from './icons/Logo.vue'
       <RouterLink to="/intake-form">
         <div
           :class="[
-            'w-fit h-11 p-2 lg:flex items-center rounded-full text-sm hidden',
+            'w-fit h-11 p-2 lg:flex items-center rounded-full text-sm hidden font-bold',
             $route.path === '/intake-form' ||
             $route.path === '/pricing' ||
             $route.path === '/faq' ||

@@ -22,5 +22,5 @@ const navItems = [
     </div>
   </div>
 
-  <Dropdown :items="navItems" class="z-30 relative lg:hidden" />
+  <Dropdown :items="navItems" class="z-30 relative lg:hidden ml-12" />
 </template>

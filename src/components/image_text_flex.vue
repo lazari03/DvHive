@@ -22,7 +22,7 @@ defineProps({
           <div
             class="absolute w-4/6 h-5/6 bg-[#FDCE83] rounded-2xl translate-x-4 translate-y-3"
           ></div>
-          <img :src="image" alt="image" class="relative w-4/5 rounded-2xl" />
+          <img :src="image" alt="image" class="relative w-[450px] h-64 rounded-2xl object-cover" />
         </div>
       </div>
     </div>

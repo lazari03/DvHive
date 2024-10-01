@@ -2,13 +2,11 @@
 import { defineAsyncComponent } from 'vue'
 
 const Hero = defineAsyncComponent(() => import('./components/Hero.vue'))
-const license_banner = defineAsyncComponent(() => import('./components/license_banner.vue'))
 const text_middle = defineAsyncComponent(() => import('./components/text_middle.vue'))
 const Logo_Large = defineAsyncComponent(() => import('./components/icons/Logo_Large.vue'))
 const image_text_flex = defineAsyncComponent(() => import('./components/image_text_flex.vue'))
 const steps_to_claim = defineAsyncComponent(() => import('./components/steps_to_claim.vue'))
 const Claim_btn = defineAsyncComponent(() => import('./components/claim_btn.vue'))
-const Client_reviews = defineAsyncComponent(() => import('./components/client_reviews.vue'))
 const Consultation = defineAsyncComponent(() => import('./components/Consultation.vue'))
 const FooterComponent = defineAsyncComponent(() => import('./components/FooterComponent.vue'))
 </script>
@@ -41,7 +39,6 @@ const FooterComponent = defineAsyncComponent(() => import('./components/FooterCo
     />
     <steps_to_claim />
     <Claim_btn />
-    <Client_reviews />
     <Consultation />
     <FooterComponent />
   </div>
