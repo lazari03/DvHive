@@ -32,6 +32,7 @@ const FooterComponent = defineAsyncComponent(() => import('./components/FooterCo
       />
     </div>
     <image_text_flex
+      alt="SideDent"
       header="How we help in a diminished value claim"
       subheader="lorem ipsum dolor sit amet, consectetur adipiscing elit,
       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."

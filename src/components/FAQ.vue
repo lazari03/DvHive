@@ -50,9 +50,6 @@ const faqs = [
       <span class="text-5xl lg:text-left text-center">Frequently Asked Questions</span>
       <font-awesome-icon :icon="['far', 'comment']" class="text-5xl mx-2" />
     </div>
-    <span class="lg:w-2/3 text-white text-md text-center">
-      If you're like most people, you probably have some questions about how it works. Learn how to file a diminished value claim and maximize your diminished value settlement!
-    </span>
     <div class="w-12 my-4 h-0 border-2 border-[#FDCE83] rounded-xl"></div>
     <template v-for="(faq, index) in faqs">
       <Accordion :title="faq.title" :id="`faqs-${index}`" :active="faq.active">
