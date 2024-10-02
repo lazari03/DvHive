@@ -32,7 +32,7 @@ async function handleSubmit() {
 
   try {
     const response = await axios.post(
-       'https://dvhiveapi.onrender.com/consultation-email',
+      'https://dvhiveapi.onrender.com/consultation-email',
       formData.value
     )
     console.log('Email sent successfully:', response.data)
@@ -45,7 +45,13 @@ async function handleSubmit() {
 </script>
 
 <template>
-  <div class="h-fit bg-[#F0ECE5] w-2/6 rounded-xl shadow-2xl py-6">
+  <div
+    :class="[
+      $route.path === '/contact'
+        ? 'h-fit bg-[#F0ECE5] w-full rounded-xl shadow-2xl py-6'
+        : 'h-fit bg-[#F0ECE5] w-2/6 rounded-xl shadow-2xl py-6'
+    ]"
+  >
     <form @submit.prevent="handleSubmit" class="p-6" action="">
       <input
         v-model="formData.full_name"
@@ -81,7 +87,7 @@ async function handleSubmit() {
         <button
           type="submit"
           @click="validatePhone()"
-          class="w-fit p-2 h-10 rounded-md bg-[#FDCE83] text-black uppercase font-extrabold "
+          class="w-fit h-fit p-2 rounded-md bg-[#FDCE83] text-black uppercase font-extrabold"
         >
           Receive free consultation
         </button>

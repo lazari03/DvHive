@@ -23,7 +23,9 @@ const props = defineProps({
           class="text-white text-xs lg:text-xl font-semibold uppercase z-20 relative lg:ml-20 text-right ml-0"
           >Claim Your Free Consultation</span
         >
-        <span class="text-white text-md" v-else> Claim Your Free Consultation </span>
+        <span class="text-white text-sm uppercase text-center w-fit h-fit" v-else>
+          Claim Your Free Consultation
+        </span>
       </div>
     </router-link>
   </div>

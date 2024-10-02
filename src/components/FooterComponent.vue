@@ -71,10 +71,10 @@ const legal = [
           >{{ item.text }}</span
         >
         <span class="mt-6 py-6 text-white hidden md:block md:w-full">
-          If you think your vehicle’s value has decreased following a recent accident, you’ve come
-          to the right place. We specialize in helping you document and recover the loss in value,
-          ensuring you get the compensation you deserve. Our expert team is here to guide you
-          through every step of the process, making it as simple and stress-free as possible.
+          If you believe your vehicle’s value has dropped after a recent accident, you’re in the
+          right place. We specialize in diminished value appraisals, helping you document and
+          recover the lost value so you receive the compensation you deserve. Our expert team will
+          guide you through each step of the process, ensuring it’s straightforward and stress-free.
         </span>
       </div>
     </div>

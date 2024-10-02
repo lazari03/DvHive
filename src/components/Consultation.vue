@@ -16,8 +16,8 @@ const route = useRoute()
             Reach out for a FREE Consultation
           </span>
           <span class="md:text-xl text-lg text-center" v-if="route.path !== '/intake-form'">
-            To help recover your car's lost value after an accident with our fast and
-            straightforward process.
+            We’re here to help you recover your car's lost value after an accident through our fast
+            and straightforward diminished value appraisal process.
           </span>
           <span class="md:text-xl text-lg text-balance text-center p-2" v-else>
             Our team is here to assist you in recovering your car's lost value after an accident.

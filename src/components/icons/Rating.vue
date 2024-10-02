@@ -97,19 +97,21 @@
   fill-rule: evenodd;
   clip-rule: evenodd;
   fill: transparent;
-  stroke: #b29a7d;
+  stroke: #f2f2f2f2;
   stroke-width: 3.3766;
 }
 .st1 {
   fill-rule: evenodd;
   clip-rule: evenodd;
-  fill: #b29a7d;
+  fill: #212112;
+  stroke: #f2f2f2f2;
+  stroke-width: 3.3766;
 }
 
 .st2 {
   fill: #f0ece5;
 }
 .st3 {
-  fill: #b29a7d;
+  fill: #f2f2f2f2;
 }
 </style>

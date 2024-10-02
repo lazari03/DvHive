@@ -4,9 +4,7 @@ import Logo from './icons/Logo.vue'
 </script>
 <template>
   <div class="relative z-30 scale-90">
-    <div
-      class="w-full h-fit flex flex-row justify-between items-center p-3 uppercase"
-    >
+    <div class="w-full h-fit flex flex-row justify-between items-center p-3 uppercase">
       <div class="flex-row flex w-fit h-fit items-center gap-2">
         <RouterLink to="/">
           <Logo class="w-12 h-auto" />
@@ -23,11 +21,13 @@ import Logo from './icons/Logo.vue'
       <RouterLink to="/intake-form">
         <div
           :class="[
-            'w-fit h-11 p-2 lg:flex items-center rounded-full text-sm hidden font-bold',
+            'w-fit h-14 py-2 px-7 lg:flex items-center rounded-full text-sm lg:text-md hidden font-bold',
             $route.path === '/intake-form' ||
             $route.path === '/pricing' ||
             $route.path === '/faq' ||
-            $route.path === '/contact'
+            $route.path === '/contact' ||
+            $route.path === '/privacy-policy' ||
+            $route.path === '/terms-of-use'
               ? 'bg-[#FDCE83] text-black'
               : 'bg-[#212121] text-white'
           ]"

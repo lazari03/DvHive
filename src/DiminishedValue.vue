@@ -3,7 +3,6 @@ import { defineAsyncComponent } from 'vue'
 import Image_text_flex from './components/image_text_flex.vue'
 
 const Hero = defineAsyncComponent(() => import('./components/Hero.vue'))
-const License_banner = defineAsyncComponent(() => import('./components/license_banner.vue'))
 const FooterComponent = defineAsyncComponent(() => import('./components/FooterComponent.vue'))
 const FAQ = defineAsyncComponent(() => import('./components/FAQ.vue'))
 const Text_middle = defineAsyncComponent(() => import('./components/text_middle.vue'))
@@ -14,11 +13,18 @@ const DiminishedValue_Types = defineAsyncComponent(
 
 <template>
   <div class="bg-[#212121] font-montserrat font-medium relative">
-    <Hero header="Diminished Value" subheader="Subheader" />
-    <License_banner />
+    <Hero
+      header="Diminished Value"
+      subheader="You may be eligible to file a diminished value claim if your vehicle meets the following criteria. Check if you qualify today!"
+    />
+
     <Text_middle
-      title="Diminished Value"
-      subtitle="lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+      title="Vehicle Diminished Value Claim Services"
+      subtitle="You may be eligible to file a diminished value claim through our diminished value appraisal services if your vehicle meets the following criteria. Check if you qualify today!<br><br>Your vehicle is less than ten years old and has under 100,000 miles.
+<br>It has no history of previous accidents, or if it has, the prior damage was minor.
+You own the vehicle (financing or loan payments are acceptable, but leased vehicles are not).
+The accident was caused by another driver who is at fault.
+Let us assist you in recovering the value you deserve!"
     />
     <Image_text_flex
       alt="SideCrash"

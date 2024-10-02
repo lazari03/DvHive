@@ -20,7 +20,7 @@ defineProps({
       >
         {{ header }}
       </h1>
-      <h3 class="text-white text-2xl font-light text-center" v-if="$route.path === '/faq'">
+      <h3 class="text-white text-2xl font-semibold text-center" v-if="$route.path === '/faq'">
         {{ subheader }}
       </h3>
     </div>

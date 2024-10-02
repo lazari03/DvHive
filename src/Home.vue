@@ -9,15 +9,15 @@ const steps_to_claim = defineAsyncComponent(() => import('./components/steps_to_
 const Claim_btn = defineAsyncComponent(() => import('./components/claim_btn.vue'))
 const Consultation = defineAsyncComponent(() => import('./components/Consultation.vue'))
 const FooterComponent = defineAsyncComponent(() => import('./components/FooterComponent.vue'))
+const CalculateSteps = defineAsyncComponent(() => import('./components/CalculateSteps.vue'))
+const FAQ = defineAsyncComponent(() => import('./components/FAQ.vue'))
 </script>
 
 <template>
   <div class="bg-[#212121] font-montserrat font-medium relative">
     <Hero
       header="We Help You Restore the Lost Value of Your Vehicle."
-      subheader="DVHIVE is a licensed auto appraisal provider operating nationwide,
-      specializing in helping you reclaim your vehicle’s value after an accident.
-      Our diminished value appraisal report will effectively document and support your claim"
+      subheader="DVHIVE is a licensed auto appraisal provider operating nationwide, specializing in helping you reclaim your vehicle’s value after an accident. Our auto diminished value appraisal report will effectively document and support your claim."
     />
     <div>
       <Logo_Large class="absolute z-0 mix-blend-screen" />
@@ -40,7 +40,9 @@ const FooterComponent = defineAsyncComponent(() => import('./components/FooterCo
     />
     <steps_to_claim />
     <Claim_btn />
+    <CalculateSteps />
     <Consultation />
+    <FAQ />
     <FooterComponent />
   </div>
 </template>
