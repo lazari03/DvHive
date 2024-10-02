@@ -26,7 +26,6 @@ const route = useRoute()
             diminish let us help you restore it efficiently and effectively.</span
           >
           <Claim_btn_consultation
-            v-if="route.path !== '/intake-form'"
             class="z-10 drop-shadow-xl"
           />
         </div>

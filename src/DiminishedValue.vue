@@ -15,7 +15,7 @@ const DiminishedValue_Types = defineAsyncComponent(
   <div class="bg-[#212121] font-montserrat font-medium relative">
     <Hero
       header="Diminished Value"
-      subheader="You may be eligible to file a diminished value claim if your vehicle meets the following criteria. Check if you qualify today!"
+      subheader="You may be eligible to file a diminished value claim through our diminished value appraisal services if your vehicle meets the following criteria. Check if you qualify today!"
     />
 
     <Text_middle
