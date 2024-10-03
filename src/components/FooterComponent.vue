@@ -82,5 +82,5 @@ const legal = [
       <footer_logo class="h-48 md:h-full" />
     </div>
   </div>
-  <h1 class="w-fit m-auto text-white">© 2024 DVHIVE. All rights reserved.</h1>
+  <h3 class="w-fit m-auto text-white">© 2024 DVHIVE. All rights reserved.</h3>
 </template>
