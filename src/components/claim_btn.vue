@@ -14,7 +14,7 @@ import White_bee from './icons/white_bee.vue'
           >Claim Your Free Consultation</span
         >
         <div
-          class="absolute top-0 z-0 w-[120%] h-full bg-[url('src/assets/images/honyecomb.svg')] bg-cover bg-center bg-repeat mix-blend-overlay"
+          class="absolute top-0 z-0 w-[120%] h-full bg-[url('https://raw.githubusercontent.com/dcifligu/consultation_images/854ee906e89d4c6ff4f57885000fbcd42945073b/honyecomb.svg')] bg-cover bg-center bg-repeat mix-blend-overlay"
         ></div>
       </div>
     </router-link>

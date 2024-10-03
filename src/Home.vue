@@ -36,7 +36,7 @@ const FAQ = defineAsyncComponent(() => import('./components/FAQ.vue'))
       header="How we help in a diminished value claim"
       subheader="lorem ipsum dolor sit amet, consectetur adipiscing elit,
       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-      image="src/assets/images/SideDent.jpg"
+      image="https://github.com/dcifligu/consultation_images/blob/main/SideDent.jpg?raw=true"
     />
     <steps_to_claim />
     <Claim_btn />

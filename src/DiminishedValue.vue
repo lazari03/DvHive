@@ -29,7 +29,7 @@ Let us assist you in recovering the value you deserve!"
     <Image_text_flex
       alt="SideCrash"
       header="An example of a diminished value claim"
-      image="src/assets/images/SideCrash.jpg"
+      image="https://github.com/dcifligu/consultation_images/blob/main/SideCrash.jpg?raw=true"
     />
     <div class="flex items-center justify-center flex-col w-fill gap-4">
       <Text_middle

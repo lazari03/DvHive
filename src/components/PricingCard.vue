@@ -21,7 +21,7 @@ defineProps({
         </div>
         <Logo_black class="w-16 h-16 z-10" />
         <div
-          class="absolute top-0 left-0 h-full rounded-xl z-0 bg-[url('src/assets/images/honyecomb.svg')] w-[150%] bg-cover bg-center bg-repeat mix-blend-overlay"
+          class="absolute top-0 left-0 h-full rounded-xl z-0 bg-[url('https://raw.githubusercontent.com/dcifligu/consultation_images/854ee906e89d4c6ff4f57885000fbcd42945073b/honyecomb.svg')] w-[150%] bg-cover bg-center bg-repeat mix-blend-overlay"
         ></div>
       </div>
       <h1 class="text-xl text-center my-4">Includes:</h1>

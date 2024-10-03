@@ -41,7 +41,7 @@ const route = useRoute()
       </div>
     </div>
     <div
-      class="absolute z-0 bg-[url('src/assets/images/honyecomb.svg')] w-[125%] h-full bg-cover bg-center mix-blend-overlay"
+      class="absolute z-0 bg-[url('https://raw.githubusercontent.com/dcifligu/consultation_images/854ee906e89d4c6ff4f57885000fbcd42945073b/honyecomb.svg')] w-[125%] h-full bg-cover bg-center mix-blend-overlay"
     ></div>
   </div>
 </template>

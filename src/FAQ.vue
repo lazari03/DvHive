@@ -13,7 +13,7 @@ const Navigation = defineAsyncComponent(() => import('./components/Nav.vue'))
     <div class="my-24 w-fit h-fit">
       <Image_text_flex
         :alt="`LegoCrash`"
-        :image="`src/assets/images/LegoCrash.jpg`"
+        :image="`https://github.com/dcifligu/consultation_images/blob/main/LegoCrash.jpg?raw=true`"
         :subheader="`If you're like most people, you probably have some questions about how it works. Learn how to file a diminished value claim and maximize your diminished value settlement!`"
       />
     </div>

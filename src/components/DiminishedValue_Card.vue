@@ -21,7 +21,7 @@ const emit = defineEmits(['click'])
       {{ title }}
     </h1>
     <div
-      class="absolute top-0 left-0 h-full rounded-xl z-0 bg-[url('src/assets/images/honyecomb.svg')] w-[120%] bg-cover bg-center bg-repeat mix-blend-overlay"
+      class="absolute top-0 left-0 h-full rounded-xl z-0 bg-[url('https://raw.githubusercontent.com/dcifligu/consultation_images/854ee906e89d4c6ff4f57885000fbcd42945073b/honyecomb.svg')] w-[120%] bg-cover bg-center bg-repeat mix-blend-overlay"
     ></div>
     <White_bee
       class="absolute -right-5 h-12 scale-x-[-1] bottom-0 z-0"
