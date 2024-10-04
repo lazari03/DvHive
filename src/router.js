@@ -17,8 +17,7 @@ const routes = [
   { path: '/contact', component: Contact },
   { path: '/intake-form', component: IntakeForm },
   { path: '/privacy-policy', component: PrivacyPolicy },
-  { path: '/terms-of-use', component: TermsOfUse },
-  { path: '/test', component: test }
+  { path: '/terms-of-use', component: TermsOfUse }
 ]
 
 const router = createRouter({
