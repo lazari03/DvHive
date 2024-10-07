@@ -12,7 +12,7 @@ const props = defineProps({
 
 <template>
   <div class="flex items-center flex-row h-fit justify-center relative w-full my-24 scale-90">
-    <router-link to="/intake-form">
+    <router-link to="/contact">
       <div
         :class="{ 'lg:py-3': !showBee }"
         class="lg:py-6 lg:px-12 py-3 px-12 bg-[#212121] rounded-full flex-row w-fit h-fit justify-center items-center z-0 relative overflow-hidden"

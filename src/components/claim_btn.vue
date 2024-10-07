@@ -4,7 +4,7 @@ import White_bee from './icons/white_bee.vue'
 
 <template>
   <div class="flex items-center flex-row h-fit justify-center relative w-full my-24">
-    <router-link to="/intake-form">
+    <router-link to="/contat">
       <div
         class="lg:py-6 lg:px-12 py-3 px-12 bg-[#FDCE83] rounded-full flex-row w-fit h-fit justify-center items-center z-0 relative overflow-hidden"
       >
