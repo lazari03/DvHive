@@ -53,7 +53,7 @@ const legal = [
             <font-awesome-icon icon="location-dot" class="text-[#FDCE83] text-xl lg:text-2xl" />
           </div>
           <div class="flex flex-col gap-4 justify-center">
-            <a href="tel:" class="text-white text-sm lg:text-lg w-fit"> +1 (123)-456-7890</a>
+            <a href="tel:" class="text-white text-sm lg:text-lg w-fit"> +1 (888)597-3282</a>
             <a href="mailto:username@mail.com" class="text-white text-sm lg:text-lg">
               username@mail.com</a
             >
