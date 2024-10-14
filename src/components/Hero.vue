@@ -22,7 +22,10 @@ defineProps(['header', 'subheader'])
         >
           {{ header }}
         </h1>
-        <h2 class="text-white md:text-2xl text-shadow-sm shadow-black font-normal">
+        <h2
+          class="text-white md:text-2xl shadow-black font-normal"
+          style="text-shadow: 3px 1px 4px black"
+        >
           {{ subheader }}
         </h2>
         <div class="flex justify-center lg:block">
