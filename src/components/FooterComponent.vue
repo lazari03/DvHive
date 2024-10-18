@@ -56,8 +56,8 @@ const legal = [
             <a href="tel:+1 (888)597-3282" class="text-white text-sm lg:text-lg w-fit">
               +1 (888)597-3282</a
             >
-            <a href="mailto:username@mail.com" class="text-white text-sm lg:text-lg">
-              username@mail.com</a
+            <a href="mailto:info@dvhive.com" class="text-white text-sm lg:text-lg">
+              info@dvhive.com</a
             >
             <span class="text-white text-sm lg:text-lg"> 1234 Street Name, City, State, Zip </span>
           </div>
