@@ -18,7 +18,7 @@ import Logo from './icons/Logo.vue'
         </div>
       </div>
       <NavBar />
-      <RouterLink to="/intake-form">
+      <RouterLink to="/contact">
         <div
           :class="[
             'w-fit h-14 py-2 px-7 lg:flex items-center rounded-full text-sm lg:text-md hidden font-bold',

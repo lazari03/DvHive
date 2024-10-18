@@ -7,7 +7,6 @@ import Contact from './Contact.vue'
 import IntakeForm from './IntakeForm.vue'
 import PrivacyPolicy from './PrivacyPolicy.vue'
 import TermsOfUse from './TermsOfUse.vue'
-import test from './test.vue'
 
 const routes = [
   { path: '/', component: Home },
@@ -20,9 +19,18 @@ const routes = [
   { path: '/terms-of-use', component: TermsOfUse }
 ]
 
+const scrollBehavior = (to, from, savedPosition) => {
+  if (savedPosition) {
+    return savedPosition
+  } else {
+    return { top: 0 }
+  }
+}
+
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
+  scrollBehavior
 })
 
 export default router
