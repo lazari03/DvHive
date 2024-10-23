@@ -50,7 +50,6 @@ const legal = [
               :icon="['far', 'envelope']"
               class="text-[#FDCE83] text-xl lg:text-2xl"
             />
-            <font-awesome-icon icon="location-dot" class="text-[#FDCE83] text-xl lg:text-2xl" />
           </div>
           <div class="flex flex-col gap-4 justify-center">
             <a href="tel:+1 (888)597-3282" class="text-white text-sm lg:text-lg w-fit">
@@ -59,7 +58,6 @@ const legal = [
             <a href="mailto:info@dvhive.com" class="text-white text-sm lg:text-lg">
               info@dvhive.com</a
             >
-            <span class="text-white text-sm lg:text-lg"> 1234 Street Name, City, State, Zip </span>
           </div>
         </div>
       </div>
