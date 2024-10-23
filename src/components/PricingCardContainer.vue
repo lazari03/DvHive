@@ -12,7 +12,7 @@ const cards = [
     ]
   },
   {
-    price: 349,
+    price: 349, 
     title: 'Diminished Value Appraisal',
     features: [
       'Certified diminished value appraisal',
