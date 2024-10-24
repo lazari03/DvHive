@@ -23,13 +23,6 @@ const formData = ref({
 })
 
 async function handleSubmit() {
-  formData.value.phone = iti.value.getNumber()
-
-  if (!iti.value.isValidNumber()) {
-    alert('Invalid phone number.')
-    return
-  }
-
   try {
     const response = await axios.post(
       'https://dvhiveapi.onrender.com/consultation-email',
@@ -95,4 +88,3 @@ async function handleSubmit() {
     </form>
   </div>
 </template>
-
