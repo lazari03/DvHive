@@ -34,6 +34,6 @@ defineProps(['header', 'subheader'])
       </div>
       <Submission_Form class="lg:w-1/3 w-full" :formData="formData" @submit="handleSubmit" />
     </div>
-    <hero_bg class="ml-10" />
+    <hero_bg class="ml-10 mt-[100%] md:mt-0" />
   </div>
 </template>
