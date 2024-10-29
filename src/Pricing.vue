@@ -11,6 +11,7 @@ const FooterComponent = defineAsyncComponent(() => import('./components/FooterCo
 
 <template>
   <div class="bg-[#212121] font-montserrat font-medium relative">
+    <div class="h-32"></div>
     <Navigation />
     <Text_middle
       title="Our Guarantee"

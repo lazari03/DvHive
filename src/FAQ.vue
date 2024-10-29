@@ -9,6 +9,7 @@ const Navigation = defineAsyncComponent(() => import('./components/Nav.vue'))
 
 <template>
   <div class="bg-[#212121] font-montserrat font-medium relative">
+    <div class="h-32"></div>
     <Navigation />
     <div class="my-24 w-fit h-fit">
       <Image_text_flex

@@ -14,6 +14,7 @@ defineProps(['header', 'subheader'])
       class="md:bg-[url('https://github.com/dcifligu/consultation_images/blob/main/HeroBg.jpg?raw=true')] lg:bg-contain opacity-40 w-full h-full absolute z-0"
       v-if="$route.path !== '/contact'"
     ></div>
+    <div class="h-32"></div>
     <Navigation />
     <div class="flex justify-between p-6 items-center h-fit relative z-10 lg:flex-row flex-col">
       <div class="lg:w-2/4 mb-11 lg:text-left text-center">

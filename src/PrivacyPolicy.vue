@@ -8,6 +8,7 @@ import Navigation from './components/Nav.vue'
 <template>
   <div class="font-montserrat font-medium relative">
     <Navigation />
+    <div class="h-32"></div>
     <div class="m-6 w-fit h-fit">
       <div class="flex flex-col gap-3 w-full relative text-black">
         <h1

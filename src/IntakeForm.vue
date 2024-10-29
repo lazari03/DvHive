@@ -9,6 +9,7 @@ const FooterComponent = defineAsyncComponent(() => import('./components/FooterCo
 
 <template>
   <div class="bg-[#212121] font-montserrat font-medium relative">
+    <div class="h-32"></div>
     <Navigation />
     <div class="flex flex-col w-full m-0 md:m-6 text-2xl text-white">
       <div class="m-0 md:m-6">

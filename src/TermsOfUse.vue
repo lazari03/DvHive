@@ -7,6 +7,7 @@ import Navigation from './components/Nav.vue'
 <template>
   <div class="bg-[#212121] font-montserrat font-medium relative">
     <Navigation />
+    <div class="h-32"></div>
     <div class="m-6 w-fit">
       <div class="flex flex-col gap-3 w-full">
         <h1

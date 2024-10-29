@@ -7,6 +7,7 @@ import Claim_btn from './components/claim_btn.vue'
 
 <template>
   <div class="bg-[#212121] font-montserrat font-medium relative">
+    <div class="h-32"></div>
     <Navigation />
     <ContactForm />
     <FooterComponent />
