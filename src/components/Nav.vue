@@ -70,7 +70,7 @@ onUnmounted(() => {
                 ? 'bg-[#FDCE83] text-black'
                 : 'bg-[#212121] text-white',
               {
-                'bg-[#FDCE83] text-black': isScrollingUp && hasScrolledPastThreshold
+                'bg-[#FDCE83] !text-black': isScrollingUp && hasScrolledPastThreshold
               }
             ]"
           >
