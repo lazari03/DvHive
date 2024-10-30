@@ -68,7 +68,10 @@ onUnmounted(() => {
               $route.path === '/privacy-policy' ||
               $route.path === '/terms-of-use'
                 ? 'bg-[#FDCE83] text-black'
-                : 'bg-[#212121] text-white'
+                : 'bg-[#212121] text-white',
+              {
+                'bg-[#FDCE83] text-black': isScrollingUp && hasScrolledPastThreshold
+              }
             ]"
           >
             Claim free consultation
