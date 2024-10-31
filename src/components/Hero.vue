@@ -2,7 +2,6 @@
 import Submission_Form from './Submission_Form.vue'
 import hero_bg from './icons/hero_bg.vue'
 import Navigation from './Nav.vue'
-import { routeLocationKey } from 'vue-router'
 import Rating from './icons/Rating.vue'
 
 defineProps(['header', 'subheader'])
