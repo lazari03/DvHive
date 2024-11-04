@@ -19,7 +19,7 @@ const generateSitemap = (routes) => {
     .map(
       (route) => `
     <url>
-      <loc>https://dvhive.com/${route}</loc>
+      <loc>https://dvhive.com${route}</loc>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
     </url>`
