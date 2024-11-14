@@ -11,10 +11,12 @@ const Consultation = defineAsyncComponent(() => import('./components/Consultatio
 const FooterComponent = defineAsyncComponent(() => import('./components/FooterComponent.vue'))
 const CalculateSteps = defineAsyncComponent(() => import('./components/CalculateSteps.vue'))
 const FAQ = defineAsyncComponent(() => import('./components/FAQ.vue'))
+const CallBall = defineAsyncComponent(() => import('./components/call_ball.vue'))
 </script>
 
 <template>
   <div class="bg-[#212121] font-montserrat font-medium relative">
+    <CallBall />
     <Hero
       header="We Help You Restore the Lost Value of Your Vehicle."
       subheader="DVHIVE is a licensed auto appraisal provider operating nationwide, specializing in helping you reclaim your vehicle’s value after an accident. Our auto diminished value appraisal report will effectively document and support your claim."

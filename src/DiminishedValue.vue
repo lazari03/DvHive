@@ -1,6 +1,7 @@
 <script setup>
 import { defineAsyncComponent } from 'vue'
 import Image_text_flex from './components/image_text_flex.vue'
+import CallBall from './components/call_ball.vue'
 
 const Hero = defineAsyncComponent(() => import('./components/Hero.vue'))
 const FooterComponent = defineAsyncComponent(() => import('./components/FooterComponent.vue'))
@@ -13,6 +14,7 @@ const DiminishedValue_Types = defineAsyncComponent(
 
 <template>
   <div class="bg-[#212121] font-montserrat font-medium relative">
+    <CallBall />
     <Hero
       header="Diminished Value"
       subheader="You may be eligible to file a diminished value claim through our diminished value appraisal services if your vehicle meets the following criteria. Check if you qualify today!"

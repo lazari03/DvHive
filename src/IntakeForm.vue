@@ -3,12 +3,14 @@ import { defineAsyncComponent } from 'vue'
 import Intake_form from './components/Intake_form.vue'
 import Consultation from './components/Consultation.vue'
 import Navigation from './components/Nav.vue'
+import Call_ball from './components/call_ball.vue';
 
 const FooterComponent = defineAsyncComponent(() => import('./components/FooterComponent.vue'))
 </script>
 
 <template>
   <div class="bg-[#212121] font-montserrat font-medium relative">
+    <Call_ball />
     <div class="h-32"></div>
     <Navigation />
     <div class="flex flex-col w-full m-0 md:m-6 text-2xl text-white">

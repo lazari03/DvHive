@@ -5,12 +5,14 @@ import Text_middle from './components/text_middle.vue'
 import PricingCardContainer from './components/PricingCardContainer.vue'
 import Consultation from './components/Consultation.vue'
 import Navigation from './components/Nav.vue'
+import call_ball from './components/call_ball.vue'
 
 const FooterComponent = defineAsyncComponent(() => import('./components/FooterComponent.vue'))
 </script>
 
 <template>
   <div class="bg-[#212121] font-montserrat font-medium relative">
+    <call_ball />
     <div class="h-32"></div>
     <Navigation />
     <Text_middle

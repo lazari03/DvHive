@@ -3,10 +3,12 @@ import FooterComponent from './components/FooterComponent.vue'
 import NavBar from './components/NavBar.vue'
 import Logo from './components/icons/Logo.vue'
 import Navigation from './components/Nav.vue'
+import CallBall from './components/call_ball.vue'
 </script>
 
 <template>
   <div class="font-montserrat font-medium relative">
+    <CallBall />
     <Navigation />
     <div class="h-32"></div>
     <div class="m-6 w-fit h-fit">
