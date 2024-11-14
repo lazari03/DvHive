@@ -1,21 +1,43 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 
 const dropdownOpen = ref<boolean>(false)
 
 const props = defineProps<{
   title: string
-  items: string[]
+  items: { name: string; path: string }[]
   active?: boolean
 }>()
 
+const closeDropdown = () => {
+  dropdownOpen.value = false
+}
+
+const handleOutsideClick = (event: MouseEvent) => {
+  const dropdown = document.querySelector('.dropdown-container')
+  if (dropdown && !dropdown.contains(event.target as Node)) {
+    closeDropdown()
+  }
+}
+
+const handleScroll = () => {
+  closeDropdown()
+}
+
 onMounted(() => {
   dropdownOpen.value = props.active || false
+  document.addEventListener('click', handleOutsideClick)
+  window.addEventListener('scroll', handleScroll)
+})
+
+onBeforeUnmount(() => {
+  document.removeEventListener('click', handleOutsideClick)
+  window.removeEventListener('scroll', handleScroll)
 })
 </script>
 
 <template>
-  <div class="inline-block text-left Z-30 m-6 relative">
+  <div class="inline-block text-left z-30 m-6 relative dropdown-container">
     <button
       @click.prevent="dropdownOpen = !dropdownOpen"
       class="inline-flex justify-between w-fit h-fit rounded-full shadow-sm px-4 py-2 bg-[#F0ECE5] text-sm font-medium text-[#212121]"
@@ -52,7 +74,7 @@ onMounted(() => {
       >
         <ul class="py-1">
           <li
-            v-for="(item, index) in items"
+            v-for="(item, index) in props.items"
             :key="index"
             class="block px-4 py-2 text-sm text-[#212121] hover:bg-[#e3e3e1] cursor-pointer"
           >
