@@ -24,7 +24,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <a href="tel:+" id="ball">
+  <a href="tel:+1 (888)597-3282" id="ball">
     <div
       :class="{ 'animate-slide-up': showBall, 'animate-slide-down': !showBall }"
       class="fixed bottom-1 right-1 h-12 w-12 rounded-full bg-[#FDCE83] z-30 m-2 hidden md:block transition-transform duration-500"
