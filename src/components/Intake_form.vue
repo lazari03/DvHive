@@ -169,18 +169,35 @@ const handleFileChange = () => {
               />
             </div>
           </div>
-          <label for="claimType">Claim Type *</label>
-          <select
-            v-model="formData.claimType"
-            id="claimType"
-            name="claimType"
-            required
-            class="w-full h-12 rounded-md bg-[#D9D9D9] p-3 focus:border-[#212121] focus:border-solid focus:border-2 focus:outline-none"
-          >
-            <option value="">Select Claim Type</option>
-            <option value="Diminished Value">Diminished Value</option>
-            <option value="Total Loss">Total Loss</option>
-          </select>
+          <div class="w-full flex flex-row gap-2">
+            <div class="w-full">
+              <label for="claimType">Claim Type *</label>
+              <select
+                v-model="formData.claimType"
+                id="claimType"
+                name="claimType"
+                required
+                class="w-full h-12 rounded-md bg-[#D9D9D9] p-3 focus:border-[#212121] focus:border-solid focus:border-2 focus:outline-none"
+              >
+                <option value="">Select Claim Type</option>
+                <option value="Diminished Value">Diminished Value</option>
+                <option value="Total Loss">Total Loss</option>
+              </select>  
+            </div>
+            <div class="w-full">
+              <label for="vinNumber">VIN Number*</label>
+
+              <input
+              v-model="formData.vinNumber"
+              id="vinNumber"
+              name="vinNumber"
+              type="text"
+              placeholder="VIN Number"
+              required
+              class="w-full h-12 rounded-md bg-[#D9D9D9] p-3 focus:border-[#212121] focus:border-solid focus:border-2 focus:outline-none"
+              />
+            </div>
+          </div>
           <label for="vehicleDetails">Vehicle Details *</label>
           <div class="flex lg:flex-row flex-col w-full gap-2">
             <input
