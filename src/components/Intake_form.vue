@@ -21,6 +21,7 @@ const formData = ref({
   email: '',
   phone: '',
   claimType: '',
+  vinNumber: '',
   vehicleYear: '',
   vehicleMake: '',
   vehicleModel: '',
