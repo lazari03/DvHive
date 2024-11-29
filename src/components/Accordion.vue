@@ -15,8 +15,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="mx-6 w-fill">
-    <div class="py-2 relative w-full text-[#212121]">
+  <div class="mx-auto w-full max-w-4xl">
+    <div class="py-0 relative inline-block text-[#212121]">
       <h2>
         <button
           :id="`accordion-title-${id}`"

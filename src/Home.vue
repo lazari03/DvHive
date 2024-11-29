@@ -12,6 +12,7 @@ const FooterComponent = defineAsyncComponent(() => import('./components/FooterCo
 const CalculateSteps = defineAsyncComponent(() => import('./components/CalculateSteps.vue'))
 const FAQ = defineAsyncComponent(() => import('./components/FAQ.vue'))
 const CallBall = defineAsyncComponent(() => import('./components/call_ball.vue'))
+const TrustBox = defineAsyncComponent(() => import('./components/Trustbox.vue'))
 </script>
 
 <template>
@@ -44,6 +45,7 @@ const CallBall = defineAsyncComponent(() => import('./components/call_ball.vue')
     <Claim_btn />
     <CalculateSteps />
     <Consultation />
+    <TrustBox />
     <FAQ />
     <FooterComponent />
   </div>
