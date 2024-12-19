@@ -3,6 +3,7 @@ import axios from 'axios'
 import { ref, onMounted } from 'vue'
 import 'intl-tel-input/build/css/intlTelInput.css'
 import intlTelInput from 'intl-tel-input'
+import submitPopup from './submitPopup.vue'
 
 const iti = ref(null)
 
@@ -22,6 +23,8 @@ const formData = ref({
   message: ''
 })
 
+const showModal = ref(false)
+
 async function handleSubmit() {
   try {
     const response = await axios.post(
@@ -29,7 +32,7 @@ async function handleSubmit() {
       formData.value
     )
     console.log('Email sent successfully:', response.data)
-    alert('Email sent successfully!')
+    showModal.value = true
   } catch (error) {
     console.error('Failed to send email:', error)
     alert('Failed to send email.')
@@ -79,12 +82,12 @@ async function handleSubmit() {
       <div class="flex justify-center">
         <button
           type="submit"
-          @click="validatePhone()"
           class="w-fit h-fit p-2 rounded-md bg-[#FDCE83] text-black uppercase font-extrabold"
         >
           Receive free consultation
         </button>
       </div>
     </form>
+    <submitPopup :show="showModal" @close="showModal = false" />
   </div>
 </template>

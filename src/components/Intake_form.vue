@@ -3,9 +3,12 @@ import axios from 'axios'
 import { ref, onMounted } from 'vue'
 import 'intl-tel-input/build/css/intlTelInput.css'
 import intlTelInput from 'intl-tel-input'
+import submitPopup from './submitPopup.vue'
+
 
 const iti = ref(null)
 const fileInput = ref(null)
+const showModal = ref(false)
 
 onMounted(() => {
   const input = document.querySelector('#phone')
@@ -118,7 +121,7 @@ async function handleSubmitIntake() {
       }
     })
     console.log('Email sent successfully:', response.data)
-    alert('Email sent successfully!')
+    showModal.value = true
   } catch (error) {
     console.error('Failed to send email:', error.response ? error.response.data : error.message)
     alert('Failed to send email.')
@@ -386,6 +389,7 @@ const handleFileChange = () => {
           </button>
         </div>
       </form>
+      <submitPopup :show="showModal" @close="showModal = false" />
     </div>
   </div>
 </template>
