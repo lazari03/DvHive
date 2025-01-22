@@ -1,6 +1,17 @@
 <script setup>
 import PricingCard from './PricingCard.vue'
 
+const freeTier = [
+{
+    price: 0,
+    title: 'Free Consultation',
+    features: [
+      'Free total loss and diminished value quote',
+      'Discover your vehicle’s current market value',
+      'Receive answers to all your questions'
+    ]
+  },
+]
 const cards = [
   {
     price: 0,
@@ -25,8 +36,8 @@ const cards = [
     ]
   },
   {
-    price: 399,
-    title: 'Total Loss Appraisal',
+    price: 200,
+    title: 'Total Loss Appraisal Only',
     features: [
       'Certified fair market value appraisal',
       'Price guides and market data analysis',
