@@ -23,7 +23,7 @@ const cards = [
     ]
   },
   {
-    price: 349, 
+    price: 350, 
     title: 'Diminished Value Appraisal',
     features: [
       'Certified diminished value appraisal',
@@ -36,7 +36,7 @@ const cards = [
     ]
   },
   {
-    price: 200,
+    price: 300,
     title: 'Total Loss Appraisal Only',
     features: [
       'Certified fair market value appraisal',
