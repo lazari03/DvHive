@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "test:selenium": "mocha tests/selenium/tests/*.test.js --timeout 30000"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
@@ -33,10 +34,14 @@
     "@vitejs/plugin-vue": "^5.0.5",
     "@vue/eslint-config-prettier": "^9.0.0",
     "autoprefixer": "^10.4.20",
+    "chai": "^5.2.0",
+    "chromedriver": "^134.0.3",
     "eslint": "^8.57.0",
     "eslint-plugin-vue": "^9.23.0",
+    "mocha": "^11.1.0",
     "postcss": "^8.4.41",
     "prettier": "^3.2.5",
+    "selenium-webdriver": "^4.29.0",
     "tailwindcss": "^3.4.12",
     "vite": "^5.3.1"
   },
