@@ -86,7 +86,18 @@ async function handleSubmit() {
         >
           Receive free consultation
         </button>
+        
       </div>
+      <div class="flex justify-center pt-4">
+      <a
+        href="tel:+18885973282"
+        class="w-fit h-fit p-2 rounded-md bg-[#FDCE83] text-black uppercase font-extrabold text-center"
+      >
+      Call Now
+      </a>
+</div>
+    
+      
     </form>
     <submitPopup :show="showModal" @close="showModal = false" />
   </div>
