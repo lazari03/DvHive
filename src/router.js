@@ -16,7 +16,9 @@ const routes = [
   { path: '/contact', component: Contact },
   { path: '/intake-form', component: IntakeForm },
   { path: '/privacy-policy', component: PrivacyPolicy },
-  { path: '/terms-of-use', component: TermsOfUse }
+  { path: '/terms-of-use', component: TermsOfUse },
+  {path: '/blog', component: () => import('./Blog.vue')},
+  {path: '/blog/:slug', component: () => import('./BlogPost.vue')},
 ]
 
 const scrollBehavior = (to, from, savedPosition) => {

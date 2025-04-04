@@ -8,7 +8,8 @@ const navItems = [
   { name: 'Diminished Value', path: '/diminished-value' },
   { name: 'Pricing', path: '/pricing' },
   { name: 'FAQ', path: '/faq' },
-  { name: 'Contact', path: '/contact' }
+  { name: 'Contact', path: '/contact' },
+  {name: 'Blog', path: '/blog'},
 ]
 </script>
 <template>
