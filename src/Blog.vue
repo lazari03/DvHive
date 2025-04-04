@@ -30,7 +30,7 @@
                 <div class="author-avatar">
                   {{ post.author ? post.author.charAt(0).toUpperCase() : 'A' }}
                 </div>
-                <span class="author-name">{{ post.author || 'Anonymous' }}</span>
+                <span class="author-name">{{ post.author || 'DV Hive' }}</span>
               </div>
               <button class="read-more" @click="goToBlogPost(post.id)">Read More →</button>
             </div>
