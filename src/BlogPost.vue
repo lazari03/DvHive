@@ -1,152 +1,119 @@
 <template>
-    <div class="blog-post-container">
-      <!-- Decorative elements -->
-      <div class="decoration decoration-1"></div>
-      <div class="decoration decoration-2"></div>
-      
-      <div v-if="loading" class="loading-state">
-        <div class="loading-title"></div>
-        <div class="loading-meta"></div>
-        <div class="loading-content">
-          <div class="loading-line" v-for="i in 12" :key="i"></div>
-        </div>
-      </div>
-      
-      <div v-else-if="error" class="error-state">
-        <p>{{ error }}</p>
-        <button @click="goBack" class="back-button">Go Back</button>
-      </div>
-      
-      <div v-else class="blog-post">
-        <div class="post-header">
-          <div class="post-meta">
-            <div class="status" v-if="post.status">{{ post.status }}</div>
-            <div class="date">{{ formatDate(post.publishedDate) }}</div>
-          </div>
-          
-          <h1 class="post-title">{{ post.title }}</h1>
-          
-          <!-- Featured Image -->
-          <div v-if="post.featuredImage" class="featured-image">
-            <img 
-              :src="post.featuredImage.url" 
-              :alt="post.title" 
-              class="w-full h-auto rounded-lg"
-            />
-          </div>
-          
-          <!-- Excerpt if available -->
-          <div v-if="post.excerpt" class="post-excerpt">
-            {{ post.excerpt }}
-          </div>
-        </div>
-        
-        <div class="post-content">
-          <!-- This is where the blog content will be rendered -->
-          <!-- Original content rendering approach -->
-          <div v-html="post.content.root.children[0].children[0].text"></div>
-          
-          <!-- Alternative content rendering approach (commented out) -->
-          <!-- <div v-html="renderContent(post.content)"></div> -->
-        </div>
-        
-        <div class="post-footer">
-          <button @click="goBack" class="back-button">← Back to Articles</button>
-        </div>
+  <div class="blog-post-container">
+    <!-- Decorative elements -->
+    <div class="decoration decoration-1"></div>
+    <div class="decoration decoration-2"></div>
+    
+    <div v-if="loading" class="loading-state">
+      <div class="loading-title"></div>
+      <div class="loading-meta"></div>
+      <div class="loading-content">
+        <div class="loading-line" v-for="i in 12" :key="i"></div>
       </div>
     </div>
-  </template>
-  
-  <script>
-  import axios from 'axios'
-  
-  export default {
-    name: 'BlogPost',
-    data() {
-      return {
-        post: null,
-        loading: true,
-        error: null
+    
+    <div v-else-if="error" class="error-state">
+      <p>{{ error }}</p>
+      <button @click="goBack" class="back-button">Go Back</button>
+    </div>
+    
+    <div v-else class="blog-post">
+      <div class="post-header">
+        <div class="post-meta">
+          <div class="status" v-if="post.status">{{ post.status }}</div>
+          <div class="date">{{ formatDate(post.publishedDate) }}</div>
+        </div>
+        
+        <h1 class="post-title">{{ post.title }}</h1>
+        
+        <!-- Featured Image -->
+        <div v-if="post.featuredImage" class="featured-image">
+          <img 
+            :src="post.featuredImage.url" 
+            :alt="post.title" 
+            class="w-full h-auto rounded-lg"
+          />
+        </div>
+        
+        <!-- Excerpt if available -->
+        <div v-if="post.excerpt" class="post-excerpt">
+          {{ post.excerpt }}
+        </div>
+      </div>
+      
+      <div class="post-content" v-html="renderContent(post.content)"></div>
+      
+      <div class="post-footer">
+        <button @click="goBack" class="back-button">← Back to Articles</button>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import axios from 'axios'
+
+export default {
+  name: 'BlogPost',
+  data() {
+    return {
+      post: null,
+      loading: true,
+      error: null
+    }
+  },
+  created() {
+    this.fetchPost()
+  },
+  methods: {
+    async fetchPost() {
+      try {
+        this.loading = true
+        const id = this.$route.params.slug
+        const response = await axios.get(`https://blog-set.vercel.app/api/posts/${id}`)
+        this.post = response.data
+        console.log('Post fetched:', this.post)
+      } catch (error) {
+        console.error('Error fetching post:', error)
+        this.error = 'Failed to load the blog post. Please try again later.'
+      } finally {
+        this.loading = false
       }
     },
-    created() {
-      this.fetchPost()
+    formatDate(dateString) {
+      if (!dateString) return 'No date'
+      const date = new Date(dateString)
+      return new Intl.DateTimeFormat('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      }).format(date)
     },
-    methods: {
-      async fetchPost() {
-        try {
-          this.loading = true
-          
-          // Get the slug from the route parameters
-          const id = this.$route.params.slug
-          
-          // Use the slug to fetch the post
-          const response = await axios.get(`/api/posts/${id}`)
-          this.post = response.data
-          console.log('Post fetched:', this.post)
-        } catch (error) {
-          console.error('Error fetching post:', error)
-          this.error = 'Failed to load the blog post. Please try again later.'
-        } finally {
-          this.loading = false
-        }
-      },
-      formatDate(dateString) {
-        if (!dateString) return 'No date'
-        
-        const date = new Date(dateString)
-        return new Intl.DateTimeFormat('en-US', {
-          year: 'numeric',
-          month: 'long',
-          day: 'numeric'
-        }).format(date)
-      },
-      renderContent(content) {
-        // This is a simplified approach - you may need to adjust based on 
-        // how Lexical editor structures its content
-        if (!content) return ''
-        
-        // For Lexical editor, the content might be already in HTML format
-        // or it might need to be parsed differently
-        if (typeof content === 'string') {
-          return content
-        }
-        
-        // If content is an object with HTML representation
-        if (content.html) {
-          return content.html
-        }
-        
-        // If content follows a specific structure (adjust as needed)
-        try {
-          // This is a fallback for the structure you mentioned
-          if (content.root && content.root.children && content.root.children[0] && content.root.children[0].children) {
-            return content.root.children[0].children[0].text || ''
-          }
-          
-          // Another common structure for rich text editors
-          if (content.root && content.root.children) {
-            // This is a very simplified approach - you might need a more complex parser
-            return content.root.children.map(node => {
-              if (node.type === 'paragraph') {
-                return `<p>${node.children.map(child => child.text || '').join('')}</p>`
-              }
-              return ''
-            }).join('')
-          }
-        } catch (e) {
-          console.error('Error parsing content:', e)
-        }
-        
+    renderContent(content) {
+      // Check that content exists and has a valid root with children
+      if (!content || !content.root || !Array.isArray(content.root.children)) {
         return 'Content could not be displayed'
-      },
-      goBack() {
-        // Navigate back to the blog listing page
-        this.$router.push('/blog')
       }
+      
+      // Iterate over the children nodes of the root
+      let html = ''
+      content.root.children.forEach(node => {
+        if (node.type === 'paragraph' && Array.isArray(node.children)) {
+          // Join the text from all children of this paragraph node
+          const paragraphText = node.children.map(child => child.text || '').join(' ')
+          html += `<p>${paragraphText}</p>`
+        } else if (node.text) {
+          html += `<p>${node.text}</p>`
+        }
+      })
+      return html
+    },
+    goBack() {
+      this.$router.push('/blog')
     }
   }
-  </script>
+}
+</script>
   
   <style scoped>
   .blog-post-container {
