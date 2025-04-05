@@ -46,9 +46,4 @@
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
     </url>
-    <url>
-      <loc>https://dvhive.com/blog/what-is-diminished-value</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-    </url>
 </urlset>

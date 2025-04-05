@@ -32,7 +32,7 @@
                 </div>
                 <span class="author-name">{{ post.author || 'DV Hive' }}</span>
               </div>
-              <button class="read-more" @click="goToBlogPost(post.id)">Read More →</button>
+              <button class="read-more" @click="goToBlogPost(post.slug)">Read More →</button>
             </div>
           </article>
         </div>
@@ -63,15 +63,14 @@
         try {
           const response = await axios.get('https://blog-set.vercel.app/api/posts')
           this.posts = response.data.docs
-          console.log('Posts fetched:', this.posts)
         } catch (error) {
           console.error('Error fetching posts:', error)
         } finally {
           this.loading = false
         }
       },
-      goToBlogPost(id){
-        this.$router.push(`/blog/${id}`)
+      goToBlogPost(slug){
+        this.$router.push(`/blog/${slug}`)
       }
     }
   }
