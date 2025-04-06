@@ -69,8 +69,8 @@ export default {
     async fetchPost() {
       try {
         this.loading = true
-        const slug = this.$route.params.slug
-        const response = await axios.get(`https://blog-set.vercel.app/api/posts/${slug}`)
+        const id = this.$route.params.slug
+        const response = await axios.get(`https://blog-set.vercel.app/api/posts/${id}`)
         this.post = response.data
         console.log('Post fetched:', this.post)
       } catch (error) {

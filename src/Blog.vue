@@ -32,7 +32,7 @@
                 </div>
                 <span class="author-name">{{ post.author || 'DV Hive' }}</span>
               </div>
-              <button class="read-more" @click="goToBlogPost(post.slug)">Read More →</button>
+              <button class="read-more" @click="goToBlogPost(post.id)">Read More →</button>
             </div>
           </article>
         </div>
@@ -69,8 +69,8 @@
           this.loading = false
         }
       },
-      goToBlogPost(slug){
-        this.$router.push(`/blog/${slug}`)
+      goToBlogPost(id){
+        this.$router.push(`/blog/${id}`)
       }
     }
   }
