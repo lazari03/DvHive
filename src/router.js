@@ -7,6 +7,8 @@ import Contact from './Contact.vue'
 import IntakeForm from './IntakeForm.vue'
 import PrivacyPolicy from './PrivacyPolicy.vue'
 import TermsOfUse from './TermsOfUse.vue'
+import Blog from './Blog.vue'
+import BlogPost from './BlogPost.vue'
 
 const routes = [
   { path: '/', component: Home },
@@ -17,8 +19,8 @@ const routes = [
   { path: '/intake-form', component: IntakeForm },
   { path: '/privacy-policy', component: PrivacyPolicy },
   { path: '/terms-of-use', component: TermsOfUse },
-  {path: '/blog', component: () => import('./Blog.vue')},
-  {path: '/blog/:slug', component: () => import('./BlogPost.vue')},
+  { path: '/blog', component: Blog},
+  { path: '/blog/:slug', component: BlogPost},
 ]
 
 const scrollBehavior = (to, from, savedPosition) => {
