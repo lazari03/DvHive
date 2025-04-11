@@ -90,24 +90,93 @@ export default {
       }).format(date)
     },
     renderContent(content) {
-      // Check that content exists and has a valid root with children
-      if (!content || !content.root || !Array.isArray(content.root.children)) {
-        return 'Content could not be displayed'
-      }
-      
-      // Iterate over the children nodes of the root
-      let html = ''
-      content.root.children.forEach(node => {
-        if (node.type === 'paragraph' && Array.isArray(node.children)) {
-          // Join the text from all children of this paragraph node
-          const paragraphText = node.children.map(child => child.text || '').join(' ')
-          html += `<p>${paragraphText}</p>`
-        } else if (node.text) {
-          html += `<p>${node.text}</p>`
-        }
-      })
-      return html
-    },
+    // Validate that content has the expected structure
+    if (!content || !content.root || !Array.isArray(content.root.children)) {
+      return 'Content could not be displayed';
+    }
+
+    // Map over the root children and generate HTML
+    return content.root.children.map(node => this.renderNode(node)).join('');
+  },
+  renderNode(node) {
+    if (!node) return '';
+
+    // Handle simple text nodes
+    if (node.type === 'text') {
+      return node.text || '';
+    }
+    
+    // Handle line breaks
+    if (node.type === 'linebreak') {
+      return '<br />';
+    }
+    
+    // Handle links
+    if (node.type === 'link') {
+      // Render the children (link text) recursively
+      const linkText = Array.isArray(node.children)
+        ? node.children.map(child => this.renderNode(child)).join('')
+        : '';
+      const url = node.fields && node.fields.url ? node.fields.url : '#';
+      // If newTab is true, use target="_blank"
+      const target = node.fields && node.fields.newTab ? '_blank' : '_self';
+      return `<a href="${url}" target="${target}">${linkText}</a>`;
+    }
+    
+    // Handle paragraphs by rendering its children and wrapping in <p>
+    if (node.type === 'paragraph') {
+      const inner = Array.isArray(node.children)
+        ? node.children.map(child => this.renderNode(child)).join('')
+        : '';
+      return `<p>${inner}</p>`;
+    }
+    
+    // Handle headings using the provided tag (e.g., h2, h3)
+    if (node.type === 'heading') {
+      const inner = Array.isArray(node.children)
+        ? node.children.map(child => this.renderNode(child)).join('')
+        : '';
+      const tag = node.tag ? node.tag : 'h2';
+      return `<${tag}>${inner}</${tag}>`;
+    }
+    
+    // Handle horizontal rules
+    if (node.type === 'horizontalrule') {
+      return '<hr />';
+    }
+    
+    // Handle lists
+    if (node.type === 'list') {
+      const listTag = node.listType === 'number' ? 'ol' : 'ul';
+      const inner = Array.isArray(node.children)
+        ? node.children.map(child => this.renderNode(child)).join('')
+        : '';
+      return `<${listTag}>${inner}</${listTag}>`;
+    }
+    
+    // Handle list items
+    if (node.type === 'listitem') {
+      const inner = Array.isArray(node.children)
+        ? node.children.map(child => this.renderNode(child)).join('')
+        : '';
+      return `<li>${inner}</li>`;
+    }
+    
+    // Handle blockquotes
+    if (node.type === 'quote') {
+      const inner = Array.isArray(node.children)
+        ? node.children.map(child => this.renderNode(child)).join('')
+        : '';
+      return `<blockquote>${inner}</blockquote>`;
+    }
+    
+    // Fallback for unknown node types
+    if (node.children && Array.isArray(node.children)) {
+      return node.children.map(child => this.renderNode(child)).join('');
+    }
+    
+    return '';
+  },
     goBack() {
       this.$router.push('/blog')
     }
