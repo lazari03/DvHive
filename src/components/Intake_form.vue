@@ -13,7 +13,7 @@ const showModal = ref(false)
 onMounted(() => {
   const input = document.querySelector('#phone')
   iti.value = intlTelInput(input, {
-    utilsScript: '/node_modules/intl-tel-input/build/js/utils.js',
+    utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js', // Use CDN
     containerClass: 'w-full',
     initialCountry: 'us'
   })
@@ -96,6 +96,8 @@ const states = [
 ]
 
 async function handleSubmitIntake() {
+  console.log('Form submission triggered'); // Debugging form submission
+
   formData.value.phone = iti.value.getNumber()
 
   console.log('Phone number:', formData.value.phone) // Debugging phone number
@@ -127,7 +129,7 @@ async function handleSubmitIntake() {
     showModal.value = true
   } catch (error) {
     console.error('Failed to send email:', error.response ? error.response.data : error.message)
-    alert('Failed to send email.')
+    alert(`Failed to send email: ${error.response ? error.response.data : error.message}`) // Detailed error
   }
 }
 
