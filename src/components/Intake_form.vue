@@ -13,7 +13,7 @@ const showModal = ref(false)
 onMounted(() => {
   const input = document.querySelector('#phone')
   iti.value = intlTelInput(input, {
-    utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js', // Use CDN
+    utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.8/build/js/utils.js', // Use a reliable CDN
     containerClass: 'w-full',
     initialCountry: 'us'
   })
