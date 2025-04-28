@@ -98,6 +98,9 @@ const states = [
 async function handleSubmitIntake() {
   formData.value.phone = iti.value.getNumber()
 
+  console.log('Phone number:', formData.value.phone) // Debugging phone number
+  console.log('Is valid number:', iti.value.isValidNumber()) // Debugging validation status
+
   if (!iti.value.isValidNumber()) {
     alert('Invalid phone number.')
     return
@@ -136,7 +139,7 @@ const handleFileChange = () => {
 <template>
   <div class="m-6">
     <div class="h-fit bg-[#F0ECE5] w-full rounded-xl shadow-2xl">
-      <form @submit.prevent="handleSubmitIntake" class="p-6" action="">
+      <form @submit.prevent="handleSubmitIntake()" class="p-6" action="">
         <div class="flex flex-col justify-start items-start gap-5 mx-2">
           <label for="full_name">Name *</label>
           <input
