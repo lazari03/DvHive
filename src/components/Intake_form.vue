@@ -11,18 +11,13 @@ const fileInput = ref(null)
 const showModal = ref(false)
 
 onMounted(() => {
-  const input = document.querySelector('#phone')
-  iti.value = intlTelInput(input, {
-    utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.8/build/js/utils.js', // Use a reliable CDN
-    containerClass: 'w-full',
-    initialCountry: 'us'
-  })
+  // Removed intl-tel-input initialization
 })
 
 const formData = ref({
   full_name: '',
   email: '',
-  phone: '',
+  phone: '', // Phone number is now a regular input field
   claimType: '',
   vinNumber: '',
   vehicleYear: '',
@@ -97,16 +92,6 @@ const states = [
 
 async function handleSubmitIntake() {
   console.log('Form submission triggered'); // Debugging form submission
-
-  formData.value.phone = iti.value.getNumber()
-
-  console.log('Phone number:', formData.value.phone) // Debugging phone number
-  console.log('Is valid number:', iti.value.isValidNumber()) // Debugging validation status
-
-  if (!iti.value.isValidNumber()) {
-    alert('Invalid phone number.')
-    return
-  }
 
   const form = new FormData()
   Object.keys(formData.value).forEach((key) => {
