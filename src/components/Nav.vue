@@ -66,7 +66,8 @@ onUnmounted(() => {
               $route.path === '/faq' ||
               $route.path === '/contact' ||
               $route.path === '/privacy-policy' ||
-              $route.path === '/terms-of-use'
+              $route.path === '/terms-of-use' ||
+              $route.path === '/blog'
                 ? 'bg-[#FDCE83] text-black'
                 : 'bg-[#212121] text-white',
               {
