@@ -11,18 +11,13 @@ const fileInput = ref(null)
 const showModal = ref(false)
 
 onMounted(() => {
-  const input = document.querySelector('#phone')
-  iti.value = intlTelInput(input, {
-    utilsScript: '/node_modules/intl-tel-input/build/js/utils.js',
-    containerClass: 'w-full',
-    initialCountry: 'us'
-  })
+  // Removed intl-tel-input initialization
 })
 
 const formData = ref({
   full_name: '',
   email: '',
-  phone: '',
+  phone: '', // Phone number is now a regular input field
   claimType: '',
   vinNumber: '',
   vehicleYear: '',
@@ -96,12 +91,7 @@ const states = [
 ]
 
 async function handleSubmitIntake() {
-  formData.value.phone = iti.value.getNumber()
-
-  if (!iti.value.isValidNumber()) {
-    alert('Invalid phone number.')
-    return
-  }
+  console.log('Form submission triggered'); // Debugging form submission
 
   const form = new FormData()
   Object.keys(formData.value).forEach((key) => {
@@ -124,7 +114,7 @@ async function handleSubmitIntake() {
     showModal.value = true
   } catch (error) {
     console.error('Failed to send email:', error.response ? error.response.data : error.message)
-    alert('Failed to send email.')
+    alert(`Failed to send email: ${error.response ? error.response.data : error.message}`) // Detailed error
   }
 }
 
@@ -136,7 +126,7 @@ const handleFileChange = () => {
 <template>
   <div class="m-6">
     <div class="h-fit bg-[#F0ECE5] w-full rounded-xl shadow-2xl">
-      <form @submit.prevent="handleSubmitIntake" class="p-6" action="">
+      <form @submit.prevent="handleSubmitIntake()" class="p-6" action="">
         <div class="flex flex-col justify-start items-start gap-5 mx-2">
           <label for="full_name">Name *</label>
           <input
