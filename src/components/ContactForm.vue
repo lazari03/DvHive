@@ -11,6 +11,9 @@ import Claim_btn from './claim_btn.vue'
             <h1 class="text-2xl font-semibold capitalize lg:text-3xl">
               Contact Us for a Free Consultation
             </h1>
+            <div class="lg:w-1/2 w-full p-1 lg:p-6">
+            <Submission_Form class="w-full pt-3" />
+          </div>
             <p class="max-w-xl mt-6">
               Let us help you recover the value of your vehicle! Reach out today for expert guidance
               and support.
@@ -38,9 +41,6 @@ import Claim_btn from './claim_btn.vue'
                 </span>
               </li>
             </ul>
-          </div>
-          <div class="lg:w-1/2 w-full p-1 lg:p-6">
-            <Submission_Form class="w-full" />
           </div>
         </div>
       </div>
