@@ -10,7 +10,7 @@ defineProps(['header', 'subheader'])
 <template>
   <div class="bg-[#212121] md:h-fit lg:h-fit w-full font-montserrat relative pb-5 z-10 h-full">
     <div
-      class="md:bg-[url('https://github.com/dcifligu/consultation_images/blob/main/HeroBg.jpg?raw=true')] lg:bg-contain opacity-40 w-full h-full absolute z-0"
+      class="lg:bg-contain opacity-40 w-full h-full absolute z-0"
       v-if="$route.path !== '/contact'"
     ></div>
     <div class="h-32"></div>
