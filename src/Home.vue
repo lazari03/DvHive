@@ -11,6 +11,7 @@ const Consultation = defineAsyncComponent(() => import('./components/Consultatio
 const FooterComponent = defineAsyncComponent(() => import('./components/FooterComponent.vue'))
 const CalculateSteps = defineAsyncComponent(() => import('./components/CalculateSteps.vue'))
 const FAQ = defineAsyncComponent(() => import('./components/FAQ.vue'))
+const VideoPlayer = defineAsyncComponent(() => import('./components/VideoPlayer.vue'))
 const CallBall = defineAsyncComponent(() => import('./components/call_ball.vue'))
 </script>
 
@@ -44,7 +45,7 @@ const CallBall = defineAsyncComponent(() => import('./components/call_ball.vue')
     <Claim_btn />
     <CalculateSteps />
     <Consultation />
-    <FAQ />
+      <VideoPlayer maxWidth="90%" />
     <FooterComponent />
   </div>
 </template>
