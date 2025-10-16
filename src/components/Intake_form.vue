@@ -105,7 +105,7 @@ async function handleSubmitIntake() {
   }
 
   try {
-    const response = await axios.post('/api/intake-email', form, {
+    const response = await axios.post('https://dvhive.onrender.com/intake-email', form, {
       headers: {
         'Content-Type': 'multipart/form-data'
       }

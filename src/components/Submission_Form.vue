@@ -28,7 +28,7 @@ const showModal = ref(false)
 async function handleSubmit() {
   try {
     const response = await axios.post(
-      '/api/consultation-email',
+      'https://dvhive.onrender.com/consultation-email',
       formData.value
     )
     console.log('Email sent successfully:', response.data)
