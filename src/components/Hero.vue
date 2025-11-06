@@ -30,7 +30,6 @@ defineProps(['header', 'subheader'])
           {{ subheader }}
         </h2>
         <div class="flex justify-center lg:block">
-          <Rating class="w-1/2 lg:w-1/3 m-0 h-auto" v-if="$route.path === '/'" />
         </div>
       </div>
       <Submission_Form class="lg:w-1/3 w-full" :formData="formData" @submit="handleSubmit" />
