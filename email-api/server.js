@@ -58,6 +58,7 @@ app.post('/consultation-email', async (req, res) => {
 })
 
 app.post('/intake-email', upload.array('file'), async (req, res) => {
+  console.log('Received intake form submission');
   const formData = req.body
   const files = req.files
 
