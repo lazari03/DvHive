@@ -1,6 +1,29 @@
 require('dotenv').config()
 const express = require('express')
-const nodemailer = require('nodemailer')
+const axios = require('axios')
+// Send email using Brevo HTTP API
+async function sendEmailWithBrevo({ subject, htmlContent }) {
+  try {
+    const response = await axios.post(
+      'https://api.brevo.com/v3/smtp/email',
+      {
+        sender: { name: 'DvHive', email: process.env.EMAIL },
+        to: [{ email: process.env.RECIPIENT_EMAIL }],
+        subject,
+        htmlContent
+      },
+      {
+        headers: {
+          'api-key': process.env.BREVO_API_KEY,
+          'Content-Type': 'application/json'
+        }
+      }
+    )
+    return response.data;
+  } catch (error) {
+    throw error.response ? error.response.data : error;
+  }
+}
 const bodyParser = require('body-parser')
 const cors = require('cors')
 
