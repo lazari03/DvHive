@@ -61,10 +61,13 @@ app.post('/intake-email', upload.array('file'), async (req, res) => {
   const formData = req.body
   const files = req.files
 
-  let attachments = files.map((file) => ({
-    filename: file.originalname,
-    path: file.path
-  }))
+  let attachments = [];
+  if (Array.isArray(files) && files.length > 0) {
+    attachments = files.map((file) => ({
+      filename: file.originalname,
+      path: file.path
+    }));
+  }
 
   const htmlContent = `
   <img src="https://github.com/dcifligu/consultation_images/blob/main/IntakeFormEmail.png?raw=true" style="width: 700px; height: 300px; display: block; margin: auto;" />
