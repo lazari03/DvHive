@@ -1,6 +1,6 @@
 <script setup>
 import axios from 'axios'
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import 'intl-tel-input/build/css/intlTelInput.css'
 import intlTelInput from 'intl-tel-input'
 import submitPopup from './submitPopup.vue'
@@ -9,6 +9,31 @@ import submitPopup from './submitPopup.vue'
 const iti = ref(null)
 const fileInput = ref(null)
 const showModal = ref(false)
+// Fire conversion when modal opens
+watch(showModal, (val) => {
+  if (val && typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    window.gtag('event', 'conversion', { send_to: 'AW-16780787359/D2p1COexussbEJ_92cE-' })
+  }
+})
+const isSubmitting = ref(false)
+const submitError = ref('')
+
+// Event snippet for Sign-up conversion page
+// In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button.
+function gtag_report_conversion(url) {
+  const callback = function () {
+    if (typeof url !== 'undefined') {
+      window.location = url
+    }
+  }
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    window.gtag('event', 'conversion', {
+      send_to: 'AW-16780787359/AlbuCNuUu8sbEJ_92cE-',
+      event_callback: callback
+    })
+  }
+  return false
+}
 
 onMounted(() => {
   // Removed intl-tel-input initialization
@@ -92,6 +117,8 @@ const states = [
 
 async function handleSubmitIntake() {
   console.log('Form submission triggered'); // Debugging form submission
+  submitError.value = ''
+  isSubmitting.value = true
 
   const form = new FormData()
   Object.keys(formData.value).forEach((key) => {
@@ -111,10 +138,16 @@ async function handleSubmitIntake() {
       }
     })
     console.log('Email sent successfully:', response.data)
+    // Fire Google Ads conversion for successful submit
+    gtag_report_conversion()
     showModal.value = true
   } catch (error) {
-    console.error('Failed to send email:', error.response ? error.response.data : error.message)
-    alert(`Failed to send email: ${error.response ? error.response.data : error.message}`) // Detailed error
+    const errMsg = error.response ? (error.response.data?.message || JSON.stringify(error.response.data)) : error.message
+    console.error('Failed to send email:', errMsg)
+    submitError.value = typeof errMsg === 'string' ? errMsg : 'Failed to send email.'
+  }
+  finally {
+    isSubmitting.value = false
   }
 }
 
@@ -128,6 +161,9 @@ const handleFileChange = () => {
     <div class="h-fit bg-[#F0ECE5] w-full rounded-xl shadow-2xl">
       <form @submit.prevent="handleSubmitIntake()" class="p-6" action="">
         <div class="flex flex-col justify-start items-start gap-5 mx-2">
+          <div v-if="submitError" class="w-full p-3 rounded-md bg-red-100 text-red-700">
+            {{ submitError }}
+          </div>
           <label for="full_name">Name *</label>
           <input
             v-model="formData.full_name"
@@ -373,9 +409,17 @@ const handleFileChange = () => {
           </div>
           <button
             type="submit"
-            class="w-fit h-fit p-3 m-auto bg-[#212121] text-white rounded-md hover:bg-[#3A3A3A] focus:outline-none"
+            :disabled="isSubmitting"
+            class="w-fit h-fit p-3 m-auto bg-[#212121] text-white rounded-md hover:bg-[#3A3A3A] focus:outline-none disabled:opacity-60 disabled:cursor-not-allowed flex items-center gap-2"
           >
-            Submit
+            <span v-if="!isSubmitting">Submit</span>
+            <span v-else class="flex items-center gap-2">
+              <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+              </svg>
+              Sending...
+            </span>
           </button>
         </div>
       </form>
